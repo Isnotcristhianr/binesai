@@ -22,7 +22,7 @@ import Countdown from "../../components/hero/countdown.vue";
           </h2>
         </div>
 
-        <div class="flex justify-center">
+        <div class="flex justify-center m-6">
           <Countdown />
         </div>
       </div>

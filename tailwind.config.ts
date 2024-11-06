@@ -41,8 +41,8 @@ export default {
           "secondary-content": "#161002", // Color oscuro para el contenido secundario
           accent: "#d1d5db", // Color de acento
           "accent-content": "#101011", // Color de contenido de acento
-          neutral: "#ffffff", // Color neutral claro (blanco)
-          "neutral-content": "#2d1e14", // Contenido neutral oscuro (negro)
+          neutral: "#ffffff", // Fondo neutral (blanco)
+          "neutral-content": "#000000", // Contenido y bordes negros
           "base-100": "#ffffff", // Fondo blanco
           "base-200": "#f0f0f0", // Fondo blanco más oscuro
           "base-300": "#e0e0e0", // Fondo gris claro

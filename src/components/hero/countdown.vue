@@ -40,31 +40,31 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="grid auto-cols-max grid-flow-col gap-5 text-center">
+  <div class="grid auto-cols-max grid-flow-col gap-5 text-center text-secondary">
     <div class="flex flex-col">
       <span class="countdown font-mono text-5xl">
         <!-- Mostrar solo los 2 primeros dígitos de los días -->
         <span :style="`--value:${Math.min(daysRef, 99)}`"></span>
       </span>
-      days
+      {{ $t("hero.time.days") }}
     </div>
     <div class="flex flex-col">
       <span class="countdown font-mono text-5xl">
         <span :style="`--value:${hoursRef}`"></span>
       </span>
-      hours
+      {{ $t("hero.time.hours") }}
     </div>
     <div class="flex flex-col">
       <span class="countdown font-mono text-5xl">
         <span :style="`--value:${minutesRef}`"></span>
       </span>
-      min
+      {{ $t("hero.time.minutes") }}
     </div>
     <div class="flex flex-col">
       <span class="countdown font-mono text-5xl">
         <span :style="`--value:${secondsRef}`"></span>
       </span>
-      sec
+        {{ $t("hero.time.seconds") }}
     </div>
   </div>
 </template>
