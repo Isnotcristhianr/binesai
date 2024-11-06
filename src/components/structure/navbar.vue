@@ -132,7 +132,7 @@ const toggleTheme = () => {
           <span>🇺🇸</span>
           <input
             type="checkbox"
-            class="toggle toggle-info"
+            class="toggle toggle-primary"
             @change="toggleLanguage"
             checked="true"
           />
