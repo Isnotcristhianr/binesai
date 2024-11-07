@@ -6,6 +6,8 @@ import Hero from "../components/hero/hero.vue";
 <template>
   <main>
     <!-- Hero Section -->
-    <Hero />
+     <div >
+       <Hero />
+     </div>
   </main>
 </template>

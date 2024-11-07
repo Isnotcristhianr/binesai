@@ -40,31 +40,30 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="grid auto-cols-max grid-flow-col gap-5 text-center text-secondary">
-    <div class="flex flex-col">
+  <div class="grid auto-cols-max grid-flow-col gap-5 text-center">
+    <div class="dark:bg-neutral dark:text-primary-content bg-gray-100 text-primary rounded-box flex flex-col p-2">
       <span class="countdown font-mono text-5xl">
-        <!-- Mostrar solo los 2 primeros dígitos de los días -->
         <span :style="`--value:${Math.min(daysRef, 99)}`"></span>
       </span>
       {{ $t("hero.time.days") }}
     </div>
-    <div class="flex flex-col">
+    <div class="dark:bg-neutral dark:text-primary-content bg-gray-100 text-primary rounded-box flex flex-col p-2">
       <span class="countdown font-mono text-5xl">
         <span :style="`--value:${hoursRef}`"></span>
       </span>
       {{ $t("hero.time.hours") }}
     </div>
-    <div class="flex flex-col">
+    <div class="dark:bg-neutral dark:text-primary-content bg-gray-100 text-primary rounded-box flex flex-col p-2">
       <span class="countdown font-mono text-5xl">
         <span :style="`--value:${minutesRef}`"></span>
       </span>
       {{ $t("hero.time.minutes") }}
     </div>
-    <div class="flex flex-col">
+    <div class="dark:bg-neutral dark:text-primary-content bg-gray-100 text-primary rounded-box flex flex-col p-2">
       <span class="countdown font-mono text-5xl">
         <span :style="`--value:${secondsRef}`"></span>
       </span>
-        {{ $t("hero.time.seconds") }}
+      {{ $t("hero.time.seconds") }}
     </div>
   </div>
 </template>
