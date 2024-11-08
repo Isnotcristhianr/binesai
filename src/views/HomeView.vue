@@ -1,6 +1,7 @@
 <script setup lang="ts">
 //components
 import Hero from "../components/hero/hero.vue";
+import Footer from "../components/structure/footer.vue";
 </script>
 
 <template>
@@ -9,5 +10,8 @@ import Hero from "../components/hero/hero.vue";
      <div >
        <Hero />
      </div>
+
+     <!-- Footer Section -->
+      <Footer />
   </main>
 </template>

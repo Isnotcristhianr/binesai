@@ -35,7 +35,7 @@ const toggleTheme = () => {
 </script>
 
 <template>
-  <div class="navbar bg-primary fixed top-0 left-0 w-full z-10 rounded">
+  <div class="navbar bg-primary/30 backdrop-blur fixed top-0 left-0 w-full z-50 rounded">
     <div class="navbar-start">
       <div class="dropdown">
         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -74,7 +74,7 @@ const toggleTheme = () => {
         <img
           src="/imgs/Logo BINESAI completo.png"
           alt="Logo BINESAI"
-          class="h-12 w-auto"
+          class="h-12 w-auto rounded"
         />
       </RouterLink>
     </div>
