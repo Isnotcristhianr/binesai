@@ -35,7 +35,7 @@ const toggleTheme = () => {
 </script>
 
 <template>
-  <div class="navbar bg-primary">
+  <div class="navbar bg-primary fixed top-0 left-0 w-full z-10 rounded">
     <div class="navbar-start">
       <div class="dropdown">
         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
