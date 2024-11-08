@@ -1,4 +1,5 @@
 <script setup lang="ts">
+//components
 import Countdown from "../../components/hero/countdown.vue";
 </script>
 
