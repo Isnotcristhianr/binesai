@@ -14,7 +14,7 @@ import Countdown from "../../components/hero/countdown.vue";
     ></iframe>
 
     <div
-      class="hero-content flex-col lg:flex-row-reverse relative z-10 backdrop-blur-sm shadow-2xl rounded-lg p-8 bg-white/5"
+      class="hero-content flex-col lg:flex-row-reverse relative z-10 backdrop-blur-lg shadow-2xl rounded-lg p-8 bg-dark"
     >
       <div class="text-center space-y-10 max-w-3xl">
         <!-- Título principal con efecto de brillo -->
