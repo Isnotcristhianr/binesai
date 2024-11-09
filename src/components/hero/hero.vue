@@ -1,11 +1,9 @@
 <script setup lang="ts">
-//components
 import Countdown from "../../components/hero/countdown.vue";
 </script>
 
 <template>
   <div class="hero min-h-screen relative overflow-hidden">
-    <!-- Agregar Spline como fondo con un iframe -->
     <iframe
       src="https://my.spline.design/bganimation-26080c817b6783b6f0548930344e2b5e/"
       frameborder="0"
@@ -13,34 +11,37 @@ import Countdown from "../../components/hero/countdown.vue";
       style="pointer-events: none"
     ></iframe>
 
-    <div
-      class="hero-content flex-col lg:flex-row-reverse relative z-10 backdrop-blur-lg shadow-2xl rounded-lg p-8 bg-dark"
-    >
-      <div class="text-center space-y-10 max-w-3xl">
-        <!-- Título principal con efecto de brillo -->
-        <h1
-          class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-base-content/90 [text-shadow:_0_0_25px_rgba(255,255,255,0.4)]"
-        >
-          {{ $t("hero.title1") }}
-        </h1>
+    <div class="hero-content relative z-10 shadow-xl rounded-lg p-8 bg-dark">
+      <div class="flex flex-col items-center w-full">
+        <!-- Logo and Text Container -->
+        <div class="flex items-center justify-center w-full mb-12">
+          <img
+            src="/imgs/Logo. Binesai transpaente.png"
+            alt="Description"
+            class="w-40 md:w-48"
+          />
 
-        <!-- BINESAI con efecto de brillo intenso -->
-        <h2
-          class="text-7xl sm:text-9xl md:text-10xl font-extrabold tracking-tighter text-base-content [text-shadow:_0_0_35px_rgba(255,255,255,0.6)] animate-pulse-slow"
-        >
-          {{ $t("hero.title2") }}
-        </h2>
+          <div class="text-container max-w-2xl text-center">
+            <h1 class="text-xl md:text-3xl font-bold text-white mb-2">
+              {{ $t("hero.title1") }}
+            </h1>
 
-        <!-- Subtítulo con brillo moderado -->
-        <h2
-          class="text-3xl sm:text-4xl italic font-medium text-base-content/80 [text-shadow:_0_0_18px_rgba(255,255,255,0.35)]"
-        >
-          {{ $t("hero.subtitle") }}
-        </h2>
+            <h2
+              class="text-5xl md:text-8xl font-extrabold text-white mb-2 tracking-wider"
+            >
+              {{ $t("hero.title2") }}
+            </h2>
 
-        <!-- Contador -->
-        <div class="flex justify-center mt-10">
-          <Countdown />
+            <h3 class="text-2xl md:text-4xl italic text-white">
+              {{ $t("hero.subtitle") }}
+            </h3>
+          </div>
+        </div>
+        <!-- Centered Countdown -->
+        <div class="w-full flex justify-center items-center">
+          <div class="countdown-container w-full max-w-2xl mx-auto">
+            <Countdown class="flex justify-center" />
+          </div>
         </div>
       </div>
     </div>
@@ -48,16 +49,30 @@ import Countdown from "../../components/hero/countdown.vue";
 </template>
 
 <style scoped>
-/* Animación de brillo */
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.countdown-container {
+  position: relative;
+  text-align: center;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
 @keyframes pulse-slow {
   0%,
   100% {
     opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0 30px rgba(0, 0, 0, 1);
   }
   50% {
     opacity: 0.85;
-    text-shadow: 0 0 50px rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 50px rgba(0, 0, 0, 1);
   }
 }
 
@@ -65,26 +80,28 @@ import Countdown from "../../components/hero/countdown.vue";
   animation: pulse-slow 3s ease-in-out infinite;
 }
 
-/* Ajustes específicos para modo claro */
 :global(.light) .animate-pulse-slow {
   text-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
 }
 
-@keyframes pulse-slow-light {
-  0%,
-  100% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
-  }
-  50% {
-    opacity: 0.85;
-    text-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-  }
+.hero-content {
+  background: linear-gradient(
+    to right,
+    rgba(251, 0, 0, 0.887),
+    rgba(220, 38, 38, 0.4)
+  );
+  backdrop-filter: blur(8px);
+  border-radius: 1rem;
+  padding: 2rem;
 }
 
-/* Asegura que el contenido esté por encima del iframe de Spline */
-.hero-content {
-  position: relative;
-  z-index: 10;
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 1rem;
+  }
+
+  .text-container {
+    max-width: 100%;
+  }
 }
 </style>
