@@ -39,9 +39,32 @@ import Countdown from "../../main/hero/countdown.vue";
           </div>
         </div>
         <!-- Centered Countdown -->
-        <div class="w-full flex justify-center items-center">
-          <div class="countdown-container w-full max-w-2xl mx-auto">
-            <Countdown class="flex justify-center" />
+        <div class="w-full">
+          <div class="">
+            <Countdown class="flex justify-center items-center" />
+            <div class="text-center my-3">
+              <!-- fecha -->
+              <h1 class="text-xl md:text font-semibold text-white mb-2">
+                5 de Abril del 2025
+              </h1>
+            </div>
+            <!-- Scroll Animation -->
+            <div class="animate-bounce mt-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="w-6 h-6 text-white"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -55,14 +78,6 @@ import Countdown from "../../main/hero/countdown.vue";
   flex-direction: column;
   align-items: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.countdown-container {
-  position: relative;
-  text-align: center;
-  padding: 2rem 0;
-  display: flex;
-  justify-content: center;
 }
 
 @keyframes pulse-slow {
@@ -103,6 +118,21 @@ import Countdown from "../../main/hero/countdown.vue";
 
   .text-container {
     max-width: 100%;
+  }
+}
+
+.animate-bounce {
+  display: flex;
+  justify-content: center;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }
 </style>

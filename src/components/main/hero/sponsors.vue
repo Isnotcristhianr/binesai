@@ -2,7 +2,6 @@
     <Vue3Marquee
       gradient-length="30%"
       speed="30"  
-      pauseOnHover="true" 
       class="sponsors-marquee"
     >
       <img
