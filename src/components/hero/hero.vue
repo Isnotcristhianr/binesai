@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Countdown from "../../components/hero/countdown.vue";
+import sponsors from "../../components/hero/sponsors.vue";
 </script>
 
 <template>
@@ -8,6 +9,7 @@ import Countdown from "../../components/hero/countdown.vue";
       src="https://my.spline.design/bganimation-26080c817b6783b6f0548930344e2b5e/"
       frameborder="0"
       class="absolute top-0 left-0 w-full h-full object-cover z-0"
+      :style="{ maskImage: 'linear-gradient(black 85%, transparent)' }"
       style="pointer-events: none"
     ></iframe>
 
@@ -46,6 +48,10 @@ import Countdown from "../../components/hero/countdown.vue";
       </div>
     </div>
   </div>
+  <!-- Sponsors Section - Positioned at the bottom -->
+  <div class="w-full flex justify-center items-center mt-8 mb-8 py-8">
+ <sponsors class="sponsors-container w-full max-w-full mx-auto" />
+</div>
 </template>
 
 <style scoped>

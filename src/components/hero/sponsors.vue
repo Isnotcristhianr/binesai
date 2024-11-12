@@ -1,10 +1,9 @@
 <template>
     <Vue3Marquee
-      :gradient="true"
-      :gradient-color="colorMode === 'light' ? [255, 255, 255] : [0, 0, 0]"
       gradient-length="30%"
-      speed="30"  <!-- Ajusta la velocidad del marquee según prefieras -->
-      pauseOnHover="true" <!-- Opcional: Pausa el marquee al pasar el cursor -->
+      speed="30"  
+      pauseOnHover="true" 
+      class="sponsors-marquee"
     >
       <img
         v-for="img in imgArray"
@@ -17,7 +16,7 @@
   
   <script setup lang="ts">
   import { ref } from 'vue'
-  import { useColorMode } from '@vueuse/core' // Asegúrate de tener vueuse/core instalado para el colorMode
+  import { useColorMode } from '@vueuse/core'
   
   // Obtén el modo de color actual
   const colorMode = useColorMode()
