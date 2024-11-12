@@ -2,6 +2,7 @@
 //components
 import Hero from "../components/main/hero/hero.vue";
 import sponsors from "../components/main/hero/sponsors.vue";
+import Intro from "../components/main/intro/intro.vue";
 import Footer from "../components/structure/footer.vue";
 </script>
 
@@ -17,7 +18,13 @@ import Footer from "../components/structure/footer.vue";
        <sponsors />
      </div>
 
-     <!-- intro section -->
+     <div class="shadow-inner">
+
+       <div class="max-w-screen-xl mx-auto ">
+         <!-- intro section -->
+          <Intro />
+       </div>
+     </div>
 
      <!-- Footer Section -->
       <Footer />
