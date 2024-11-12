@@ -1,7 +1,7 @@
 <script setup lang="ts">
 //components
-import Hero from "../components/hero/hero.vue";
-import sponsors from "../components/hero/sponsors.vue";
+import Hero from "../components/main/hero/hero.vue";
+import sponsors from "../components/main/hero/sponsors.vue";
 import Footer from "../components/structure/footer.vue";
 </script>
 
@@ -16,6 +16,8 @@ import Footer from "../components/structure/footer.vue";
      <div class="sponsors-container w-full max-w-full mx-auto">
        <sponsors />
      </div>
+
+     <!-- intro section -->
 
      <!-- Footer Section -->
       <Footer />

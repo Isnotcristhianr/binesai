@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import Countdown from "../../components/hero/countdown.vue";
-import sponsors from "../../components/hero/sponsors.vue";
+import Countdown from "../../main/hero/countdown.vue";
 </script>
 
 <template>
@@ -48,10 +47,6 @@ import sponsors from "../../components/hero/sponsors.vue";
       </div>
     </div>
   </div>
-  <!-- Sponsors Section - Positioned at the bottom -->
- <!--  <div class="w-full flex justify-center items-center mt-8 mb-8 py-8">
- <sponsors class="sponsors-container w-full max-w-full mx-auto" />
-</div> -->
 </template>
 
 <style scoped>
