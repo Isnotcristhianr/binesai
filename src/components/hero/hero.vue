@@ -49,9 +49,9 @@ import sponsors from "../../components/hero/sponsors.vue";
     </div>
   </div>
   <!-- Sponsors Section - Positioned at the bottom -->
-  <div class="w-full flex justify-center items-center mt-8 mb-8 py-8">
+ <!--  <div class="w-full flex justify-center items-center mt-8 mb-8 py-8">
  <sponsors class="sponsors-container w-full max-w-full mx-auto" />
-</div>
+</div> -->
 </template>
 
 <style scoped>
