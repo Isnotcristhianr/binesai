@@ -3,6 +3,7 @@
 import Hero from "../components/main/hero/hero.vue";
 import sponsors from "../components/main/hero/sponsors.vue";
 import Intro from "../components/main/intro/intro.vue";
+import Objectives from "../components/main/intro/objetives.vue";
 import Footer from "../components/structure/footer.vue";
 </script>
 
@@ -23,6 +24,8 @@ import Footer from "../components/structure/footer.vue";
        <div class="max-w-screen-xl mx-auto ">
          <!-- intro section -->
           <Intro />
+          <!-- objetivos section -->
+          <Objectives />
        </div>
      </div>
 
