@@ -1,4 +1,5 @@
 {
+    "setup": "Setup",
     "hero":{
         "title1": "BINESAI National Painting Biennial 2024",
         "title2": "BINESAI",
@@ -9,5 +10,21 @@
             "minutes": "min",
             "seconds": "sec"
         }
+    },
+    "intro": {
+        "title": {
+            "p1": "Strengthening",
+            "p2": "the",
+            "p3": "sculptural",
+            "p4": "legacy"
+        },
+        "description": {
+            "p1": "The",
+            "p2": "8th National Sculpture Biennial of San Antonio de Ibarra BINESAI",
+            "p3": "is a great exhibition of art that has as its mission to make visible and strengthen the sculptural legacy of Ecuador. This project, to be held in 2025, aims to gather the main exponents of contemporary sculpture, ",
+            "p4": "promoting the dialogue between generations and the cultural exchange",
+            "p5": "between artists, students, master artists and the community. San Antonio de Ibarra, recognized for its sculptural tradition, will be the epicenter of this gathering that reunites art, culture and heritage, encouraging the creation of new forms and techniques in contemporary sculpture."
+          }
     }
+
 }

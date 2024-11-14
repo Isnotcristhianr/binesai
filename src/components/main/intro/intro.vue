@@ -5,34 +5,48 @@ import Activities from "./activities.vue";
 
 <template>
   <Activities />
-  <div class="flex flex-col items-center justify-center min-h-screen p-4">
-    <div
-      class="flex justify-center flex-col items-center m-6 max-w-screen-md w-full"
-    >
-      <div
-        class="banner banner-secondary p-4 text-center bg-primary text-xl font-bold mb-4 rounded-md shadow-lg text-white"
-      >
-        Fortaleciendo el legado escultórico ecuatoriano
+  <div class="flex flex-col items-center justify-center min-h-screen p-6">
+    <div class="grid md:grid-cols-2 gap-8 max-w-screen-lg w-full">
+      <!-- Card Título -->
+      <div class="flex items-start md:justify-end">
+        <h1
+          class="text-7xl font-extrabold text-primary leading-tight md:leading-none md:text-right"
+        >
+          {{ $t("intro.title.p1") }}
+          <br />
+          {{ $t("intro.title.p2") }}
+          <br />
+          {{ $t("intro.title.p3") }}
+          <br />
+          {{ $t("intro.title.p4") }}
+        </h1>
       </div>
-      <p class="text-justify max-w-lg m-4 text-xl">
-        La
-        <label class="font-bold">
-          8va Bienal Nacional de Escultura San Antonio de Ibarra BINESAI</label
-        >
-        es una gran exhibición de arte que tiene como misión visibilizar y
-        fortalecer el patrimonio escultórico del Ecuador. Este proyecto, a
-        realizarse en 2025, busca reunir a los principales exponentes de la
-        escultura contemporánea,
-        <label class="font-bold">
-          promoviendo el diálogo entre generaciones y el intercambio
-          cultural</label
-        >
-        entre artistas, estudiantes, maestros artesanos y la comunidad. San
-        Antonio de Ibarra, reconocida por su tradición escultórica, será el
-        epicentro de este encuentro que reúne arte, cultura y patrimonio,
-        impulsando la creación de nuevas formas y técnicas en la escultura
-        contemporánea.
-      </p>
+
+      <!-- Card Descripción -->
+      <div class="flex items-center">
+        <p class="text-lg leading-relaxed text-justify">
+          {{ $t("intro.description.p1") }}
+          <span class="font-semibold 0"
+            >
+            {{ $t("intro.description.p2") }}
+            I</span
+          >
+          {{ $t("intro.description.p3") }}
+          <span class="font-semibold"
+            >
+              {{ $t("intro.description.p4") }}
+            </span
+          >
+          {{ $t("intro.description.p5") }}
+        </p>
+      </div>
     </div>
   </div>
 </template>
+
+<style scoped>
+/* Opcional: Estilos para ajustar la tipografía */
+h1 {
+  line-height: 1.2;
+}
+</style>
