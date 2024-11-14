@@ -26,20 +26,34 @@ import Activities from "./activities.vue";
       <div class="flex items-center">
         <p class="text-lg leading-relaxed text-justify">
           {{ $t("intro.description.p1") }}
-          <span class="font-semibold 0"
-            >
+          <span class="font-semibold 0">
             {{ $t("intro.description.p2") }}
             I</span
           >
           {{ $t("intro.description.p3") }}
-          <span class="font-semibold"
-            >
-              {{ $t("intro.description.p4") }}
-            </span
-          >
+          <span class="font-semibold">
+            {{ $t("intro.description.p4") }}
+          </span>
           {{ $t("intro.description.p5") }}
         </p>
       </div>
+    </div>
+    <!-- Scroll Animation -->
+    <div class="animate-bounce mt-6">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        class="w-6 h-6 text-black"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M19 9l-7 7-7-7"
+        />
+      </svg>
     </div>
   </div>
 </template>
