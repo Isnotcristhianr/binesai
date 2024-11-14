@@ -10,36 +10,34 @@ import Activities from "./activities.vue";
       <!-- Card Título -->
       <div class="flex items-start md:justify-end">
         <h1
-          class="text-6xl font-extrabold text-primary leading-tight md:leading-none md:text-right"
+          class="text-7xl font-extrabold text-primary leading-tight md:leading-none md:text-right"
         >
-          Fortaleciendo<br />
-          el legado<br />
-          escultórico<br />
-          ecuatoriano
+          {{ $t("intro.title.p1") }}
+          <br />
+          {{ $t("intro.title.p2") }}
+          <br />
+          {{ $t("intro.title.p3") }}
+          <br />
+          {{ $t("intro.title.p4") }}
         </h1>
       </div>
 
       <!-- Card Descripción -->
       <div class="flex items-center">
         <p class="text-lg leading-relaxed text-justify">
-          La
+          {{ $t("intro.description.p1") }}
           <span class="font-semibold 0"
-            >8va Bienal Nacional de Escultura San Antonio de Ibarra
-            BINESAI</span
+            >
+            {{ $t("intro.description.p2") }}
+            I</span
           >
-          es una gran exhibición de arte que tiene como misión visibilizar y
-          fortalecer el patrimonio escultórico del Ecuador. Este proyecto, a
-          realizarse en 2025, busca reunir a los principales exponentes de la
-          escultura contemporánea,
+          {{ $t("intro.description.p3") }}
           <span class="font-semibold"
-            >promoviendo el diálogo entre generaciones y el intercambio
-            cultural</span
+            >
+              {{ $t("intro.description.p4") }}
+            </span
           >
-          entre artistas, estudiantes, maestros artesanos y la comunidad. San
-          Antonio de Ibarra, reconocida por su tradición escultórica, será el
-          epicentro de este encuentro que reúne arte, cultura y patrimonio,
-          impulsando la creación de nuevas formas y técnicas en la escultura
-          contemporánea.
+          {{ $t("intro.description.p5") }}
         </p>
       </div>
     </div>

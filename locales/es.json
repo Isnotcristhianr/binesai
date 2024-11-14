@@ -1,5 +1,6 @@
 {
     "setup": "Configuración",
+
     "hero":{
         "title1": "Bienal Nacional de Escultura",
         "title2": "BINESAI",
@@ -9,6 +10,21 @@
             "hours": "horas",
             "minutes": "min",
             "seconds": "seg"
+        }
+    },
+    "intro": {
+        "title": {
+            "p1": "Fortaleciendo",
+            "p2": "el legado",
+            "p3": "escultórico",
+            "p4": "ecuatoriano"
+        },
+        "description": {
+            "p1": "La",
+            "p2": "8va Bienal Nacional de Escultura San Antonio de Ibarra BINESAI",
+            "p3": "es una gran exhibición de arte que tiene como misión visibilizar y fortalecer el patrimonio escultórico del Ecuador. Este proyecto, a realizarse en 2025, busca reunir a los principales exponentes de la escultura contemporánea, ",
+            "p4": "promoviendo el diálogo entre generaciones y el intercambio cultural",
+            "p5": "entre artistas, estudiantes, maestros artesanos y la comunidad. San Antonio de Ibarra, reconocida por su tradición escultórica, será el epicentro de este encuentro que reúne arte, cultura y patrimonio, impulsando la creación de nuevas formas y técnicas en la escultura contemporánea."
         }
     }
 }
