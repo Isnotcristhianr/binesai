@@ -1,12 +1,15 @@
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
-import Activities from "./activities.vue";
 </script>
 
 <template>
   <div
     class="relative flex flex-col items-center justify-center min-h-screen w-screen"
-    style="background-image: url(/imgs/bgImpactos.jpg); background-size: cover; background-position: center;"
+    style="
+      background-image: url(/imgs/bgImpactos.jpg);
+      background-size: cover;
+      background-position: center;
+    "
   >
     <!-- Sombreado Blanco -->
     <div class="absolute inset-0 bg-white opacity-30"></div>
@@ -24,9 +27,13 @@ import Activities from "./activities.vue";
 
       <!-- Contenido Colapsable -->
       <div class="w-full space-y-4">
-        <div class="collapse collapse-arrow bg-white shadow-md rounded-lg overflow-hidden">
+        <div
+          class="collapse collapse-arrow bg-white shadow-md rounded-lg overflow-hidden"
+        >
           <input type="radio" name="my-accordion-2" checked />
-          <div class="collapse-title text-lg md:text-xl font-semibold text-primary">
+          <div
+            class="collapse-title text-lg md:text-xl font-semibold text-primary"
+          >
             {{ $t("impactos_clave.impactos.impacto1.title") }}
           </div>
           <div class="collapse-content p-4 text-base md:text-lg text-gray-700">
@@ -34,9 +41,13 @@ import Activities from "./activities.vue";
           </div>
         </div>
 
-        <div class="collapse collapse-arrow bg-white shadow-md rounded-lg overflow-hidden">
+        <div
+          class="collapse collapse-arrow bg-white shadow-md rounded-lg overflow-hidden"
+        >
           <input type="radio" name="my-accordion-2" />
-          <div class="collapse-title text-lg md:text-xl font-semibold text-primary">
+          <div
+            class="collapse-title text-lg md:text-xl font-semibold text-primary"
+          >
             {{ $t("impactos_clave.impactos.impacto2.title") }}
           </div>
           <div class="collapse-content p-4 text-base md:text-lg text-gray-700">
@@ -44,9 +55,13 @@ import Activities from "./activities.vue";
           </div>
         </div>
 
-        <div class="collapse collapse-arrow bg-white shadow-md rounded-lg overflow-hidden">
+        <div
+          class="collapse collapse-arrow bg-white shadow-md rounded-lg overflow-hidden"
+        >
           <input type="radio" name="my-accordion-2" />
-          <div class="collapse-title text-lg md:text-xl font-semibold text-primary">
+          <div
+            class="collapse-title text-lg md:text-xl font-semibold text-primary"
+          >
             {{ $t("impactos_clave.impactos.impacto3.title") }}
           </div>
           <div class="collapse-content p-4 text-base md:text-lg text-gray-700">
@@ -58,6 +73,4 @@ import Activities from "./activities.vue";
   </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

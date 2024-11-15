@@ -1,3 +1,11 @@
+<script setup lang="ts">
+//components
+import Footer from "../components/structure/footer.vue";
+</script>
 <template>
-    programacion
+  <main>
+    
+    <!-- Footer Section -->
+    <Footer />
+  </main>
 </template>
