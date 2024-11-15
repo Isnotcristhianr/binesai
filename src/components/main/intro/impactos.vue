@@ -6,10 +6,10 @@ import Activities from "./activities.vue";
 <template>
   <div
     class="relative flex flex-col items-center justify-center min-h-screen w-screen"
-    style="background-image: url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp); background-size: cover; background-position: center;"
+    style="background-image: url(public/imgs/bgImpactos.jpg); background-size: cover; background-position: center;"
   >
     <!-- Sombreado Blanco -->
-    <div class="absolute inset-0 bg-white opacity-40"></div>
+    <div class="absolute inset-0 bg-white opacity-30"></div>
 
     <!-- Contenido Principal -->
     <div class="relative z-10 max-auto p-6 md:p-10">
