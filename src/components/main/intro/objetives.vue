@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
+//widgets
+import FlipCard from "./widgets/flipcard.vue";
 </script>
 
 <template>
@@ -11,100 +13,26 @@ import { Icon } from "@iconify/vue";
       {{ $t("objectives.title1") }}
     </h1>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      <!-- Card 1 -->
-      <div class="flip-card w-96 h-96 perspective">
-        <div class="flip-card-inner">
-          <!-- Front Side -->
-          <div class="flip-card-front card bg-base-100 image-full shadow-xl">
-            <figure>
-              <img src="/imgs/objective1_card.jpg" />
-            </figure>
-            <div class="card-body">
-              <h2
-                class="card-title flex items-center justify-center h-full text-2xl"
-              >
-                {{ $t("objectives.objective1.title") }}
-              </h2>
-              <div class="card-actions justify-end"></div>
-            </div>
-          </div>
-          <!-- Back Side -->
-          <div class="flip-card-back card bg-base-200 shadow-xl">
-            <div class="card-body flex items-center justify-center">
-              <p>{{ $t("objectives.objective1.description") }}</p>
-              <div class="card-actions justify-end"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Card 2 -->
-      <div class="flip-card w-96 h-96 perspective">
-        <div class="flip-card-inner">
-          <div class="flip-card-front card bg-base-100 image-full shadow-xl">
-            <figure>
-              <img src="/imgs/objective2_card.jpg" />
-            </figure>
-            <div class="card-body">
-              <h2
-                class="card-title flex items-center justify-center h-full text-2xl"
-              >
-                {{ $t("objectives.objective2.title") }}
-              </h2>
-              <div class="card-actions justify-end"></div>
-            </div>
-          </div>
-          <div class="flip-card-back card bg-base-200 shadow-xl">
-            <div class="card-body flex items-center justify-center">
-              <p>{{ $t("objectives.objective2.description") }}</p>
-              <div class="card-actions justify-end"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Card 3 -->
-      <div class="flip-card w-96 h-96 perspective">
-        <div class="flip-card-inner">
-          <div class="flip-card-front card bg-base-100 image-full shadow-xl">
-            <figure>
-              <img src="/imgs/objective3_card.jpg" />
-            </figure>
-            <div class="card-body">
-              <h2
-                class="card-title flex items-center justify-center h-full text-2xl"
-              >
-                {{ $t("objectives.objective3.title") }}
-              </h2>
-              <div class="card-actions justify-end"></div>
-            </div>
-          </div>
-          <div class="flip-card-back card bg-base-200 shadow-xl">
-            <div class="card-body">
-              <p>{{ $t("objectives.objective3.description") }}</p>
-              <div class="card-actions justify-end"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Scroll Animation -->
-    <div class="animate-bounce mt-6">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="2"
-        stroke="currentColor"
-        class="w-6 h-6 text-black"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M19 9l-7 7-7-7"
-        />
-      </svg>
+      <!-- Cards -->
+      <FlipCard
+        image="/imgs/objective1_card.jpg"
+        :title="$t('objectives.objective1.title')"
+        :description="$t('objectives.objective1.description')"
+      />
+      <FlipCard
+        image="/imgs/objective2_card.jpg"
+        :title="$t('objectives.objective2.title')"
+        :description="$t('objectives.objective2.description')"
+      />
+      <FlipCard
+        image="/imgs/objective3_card.jpg"
+        :title="$t('objectives.objective3.title')"
+        :description="$t('objectives.objective3.description')"
+      />
     </div>
   </div>
 </template>
+
 <style scoped>
 .perspective {
   perspective: 1000px;

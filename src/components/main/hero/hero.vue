@@ -48,23 +48,6 @@ import Countdown from "../../main/hero/countdown.vue";
                 5 de Abril del 2025
               </h1>
             </div>
-            <!-- Scroll Animation -->
-            <div class="animate-bounce mt-6">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="2"
-                stroke="currentColor"
-                class="w-6 h-6 text-white"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </div>
           </div>
         </div>
       </div>
@@ -119,12 +102,6 @@ import Countdown from "../../main/hero/countdown.vue";
   .text-container {
     max-width: 100%;
   }
-}
-
-.animate-bounce {
-  display: flex;
-  justify-content: center;
-  animation: bounce 2s infinite;
 }
 
 @keyframes bounce {
