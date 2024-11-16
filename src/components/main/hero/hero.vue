@@ -8,7 +8,6 @@ import Countdown from "../../main/hero/countdown.vue";
       src="https://my.spline.design/bganimation-26080c817b6783b6f0548930344e2b5e/"
       frameborder="0"
       class="absolute top-0 left-0 w-full h-full object-cover z-0"
-      :style="{ maskImage: 'linear-gradient(black 85%, transparent)' }"
       style="pointer-events: none"
     ></iframe>
 

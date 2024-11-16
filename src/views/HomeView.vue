@@ -10,35 +10,39 @@ import Footer from "../components/structure/footer.vue";
 </script>
 
 <template>
-  <main>
+  <main class="overflow-hidden">
     <!-- Hero Section -->
-    <div>
+    <div class="">
       <Hero />
     </div>
 
     <!-- Sponsors Section -->
-    <div class="sponsors-container w-full max-w-full mx-auto">
+    <div class="sponsors-container w-full max-w-screen-xl mx-auto">
       <sponsors />
     </div>
 
-    <div class="shadow-inner">
-      <div class="max-w-screen-xl mx-auto">
+    <div class="shadow-inner max-w-screen-xl mx-auto">
+      <div>
         <!-- intro section -->
         <Intro />
+      </div>
+      <div>
         <!-- objetivos section -->
         <Objectives />
       </div>
-      <div class="max-w-screen-xl">
-        <!-- hitos section -->
-        <Hitos />
-      </div>
-      <div class="max-w-screen-xl">
-        <!-- impactos section -->
-        <Impactos />
-      </div>
+    </div>
+    <div>
+      <!-- hitos section -->
+      <Hitos />
+    </div>
+    <!-- impactos section -->
+    <div class="w-full">
+      <Impactos />
     </div>
 
     <!-- Footer Section -->
-    <Footer />
+    <div >
+      <Footer />
+    </div>
   </main>
 </template>

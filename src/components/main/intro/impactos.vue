@@ -6,7 +6,7 @@ import Activities from "./activities.vue";
 <template>
   <div
     class="relative flex flex-col items-center justify-center min-h-screen w-screen"
-    style="background-image: url(/imgs/bgImpactos.jpg); background-size: cover; background-position: center;"
+    style="background-image: url(/imgs/bgImpactos.jpg); background-size: cover; background-position: center; background-size: 100% 100%;"
   >
     <!-- Sombreado Blanco -->
     <div class="absolute inset-0 bg-white opacity-30"></div>
