@@ -40,27 +40,27 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="grid auto-cols-max grid-flow-col gap-5 text-center">
-    <div class="bg-gray-100 text-primary shadow-lg rounded-box flex flex-col p-2">
-      <span class="countdown font-mono text-5xl">
+  <div class="grid auto-cols-max grid-flow-col gap-3 text-center">
+    <div class="bg-gray-300 text-primary shadow-lg rounded-box flex flex-col p-2">
+      <span class="countdown font-mono text-3xl">
         <span :style="`--value:${Math.min(daysRef, 99)}`"></span>
       </span>
       {{ $t("hero.time.days") }}
     </div>
-    <div class="bg-gray-100 text-primary shadow-lg rounded-box flex flex-col p-2">
-      <span class="countdown font-mono text-5xl">
+    <div class="bg-gray-300 text-primary shadow-lg rounded-box flex flex-col p-2">
+      <span class="countdown font-mono text-3xl">
         <span :style="`--value:${hoursRef}`"></span>
       </span>
       {{ $t("hero.time.hours") }}
     </div>
-    <div class="bg-gray-100 text-primary shadow-lg rounded-box flex flex-col p-2">
-      <span class="countdown font-mono text-5xl">
+    <div class="bg-gray-300 text-primary shadow-lg rounded-box flex flex-col p-2">
+      <span class="countdown font-mono text-3xl">
         <span :style="`--value:${minutesRef}`"></span>
       </span>
       {{ $t("hero.time.minutes") }}
     </div>
-    <div class="bg-gray-100 text-primary shadow-lg rounded-box flex flex-col p-2">
-      <span class="countdown font-mono text-5xl">
+    <div class="bg-gray-300 text-primary shadow-lg rounded-box flex flex-col p-2">
+      <span class="countdown font-mono text-3xl">
         <span :style="`--value:${secondsRef}`"></span>
       </span>
       {{ $t("hero.time.seconds") }}
