@@ -26,7 +26,7 @@ import Countdown from "../../main/hero/countdown.vue";
           />
 
           <div class="text-container max-w-2xl mx-auto text-center space-y-2">
-            <h1 class="text-xl md:text-3xl font-bold text-black">
+            <h1 class="text-xl md:text-3xl text-black">
               {{ $t("hero.title1") }}
             </h1>
             <h2
