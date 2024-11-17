@@ -21,7 +21,7 @@ import Footer from "../components/structure/footer.vue";
       <sponsors />
     </div>
 
-    <div class="shadow-inner max-w-screen-xl mx-auto">
+    <div class=" max-w-screen-xl mx-auto">
       <div>
         <!-- intro section -->
         <Intro />

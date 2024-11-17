@@ -22,8 +22,8 @@ const props = defineProps<{
         </div>
       </div>
       <!-- Back Side -->
-      <div class="flip-card-back card bg-base-200 shadow-xl">
-        <div class="card-body flex justify-center h-full">
+      <div class="flip-card-back card bg-base-200 shadow-xl flex items-center justify-center">
+        <div class="card-body h-full flex items-center justify-center">
           <p class="text-2xl text-center">
             {{ description }}
           </p>

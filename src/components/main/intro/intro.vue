@@ -9,7 +9,7 @@ import Activities from "./activities.vue";
     <div class="grid md:grid-cols-2 gap-8 max-w-screen-lg w-full">
       <!-- Card Título -->
       <div class="flex items-start md:justify-end">
-        <h1
+        <h2
           class="text-7xl font-extrabold text-primary leading-tight md:leading-none md:text-right"
         >
           {{ $t("intro.title.p1") }}
@@ -19,7 +19,7 @@ import Activities from "./activities.vue";
           {{ $t("intro.title.p3") }}
           <br />
           {{ $t("intro.title.p4") }}
-        </h1>
+        </h2>
       </div>
 
       <!-- Card Descripción -->
@@ -42,8 +42,4 @@ import Activities from "./activities.vue";
 </template>
 
 <style scoped>
-/* Opcional: Estilos para ajustar la tipografía */
-h1 {
-  line-height: 1.2;
-}
 </style>

@@ -15,11 +15,11 @@ import Activities from "./activities.vue";
     <div class="relative z-10 max-auto p-6 md:p-10">
       <!-- Card Título -->
       <div class="flex items-start mb-8">
-        <h1
+        <h2
           class="text-7xl font-extrabold text-primary leading-tight md:leading-none md:text-right mb-8 items-center drop-shadow-lg"
         >
           {{ $t("impactos_clave.title") }}
-        </h1>
+        </h2>
       </div>
 
       <!-- Contenido Colapsable -->
