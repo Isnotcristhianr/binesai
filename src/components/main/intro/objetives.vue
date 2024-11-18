@@ -7,11 +7,11 @@ import FlipCard from "./widgets/flipcard.vue";
 <template>
   <div class="flex flex-col items-center justify-center p-6 min-h-screen">
     <!-- Objective title -->
-    <2
+    <h2
       class="text-7xl font-extrabold text-primary leading-tight md:leading-none md:text-right mb-8"
     >
       {{ $t("objectives.title1") }}
-    </2>
+    </h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       <!-- Cards -->
       <FlipCard

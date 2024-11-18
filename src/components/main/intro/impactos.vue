@@ -9,47 +9,47 @@ import Activities from "./activities.vue";
     style="background-image: url(/imgs/bgImpactos.jpg); background-size: cover; background-position: center; background-size: 100% 100%;"
   >
     <!-- Sombreado Blanco -->
-    <div class="absolute inset-0 bg-white opacity-30"></div>
+    <div class="absolute inset-0 opacity-30"></div>
 
     <!-- Contenido Principal -->
-    <div class="relative z-10 max-auto p-6 md:p-10">
+    <div class="relative z-10 max-w-3xl mx-auto backdrop-blur-lg shadow-lg rounded-lg p-8 md:p-12 m-4">
       <!-- Card Título -->
       <div class="flex items-start mb-8">
         <h2
-          class="text-7xl font-extrabold text-primary leading-tight md:leading-none md:text-right mb-8 items-center drop-shadow-lg"
+          class="text-5xl font-bold text-secondary leading-tight text-center mb-8 drop-shadow-lg"
         >
           {{ $t("impactos_clave.title") }}
         </h2>
       </div>
 
       <!-- Contenido Colapsable -->
-      <div class="w-full space-y-4">
-        <div class="collapse collapse-arrow bg-white shadow-md rounded-lg overflow-hidden">
-          <input type="radio" name="my-accordion-2" checked />
+      <div class="w-full space-y-6">
+        <div class="collapse collapse-arrow bg-white shadow-lg rounded-lg overflow-hidden">
+          <input type="checkbox" />
           <div class="collapse-title text-lg md:text-xl font-semibold text-primary">
             {{ $t("impactos_clave.impactos.impacto1.title") }}
           </div>
-          <div class="collapse-content p-4 text-base md:text-lg text-gray-700">
+          <div class="collapse-content p-4 text-base md:text-lg text-gray-800 leading-relaxed">
             <p>{{ $t("impactos_clave.impactos.impacto1.description") }}</p>
           </div>
         </div>
 
-        <div class="collapse collapse-arrow bg-white shadow-md rounded-lg overflow-hidden">
-          <input type="radio" name="my-accordion-2" />
+        <div class="collapse collapse-arrow bg-white shadow-lg rounded-lg overflow-hidden">
+          <input type="checkbox" />
           <div class="collapse-title text-lg md:text-xl font-semibold text-primary">
             {{ $t("impactos_clave.impactos.impacto2.title") }}
           </div>
-          <div class="collapse-content p-4 text-base md:text-lg text-gray-700">
+          <div class="collapse-content p-4 text-base md:text-lg text-gray-800 leading-relaxed">
             <p>{{ $t("impactos_clave.impactos.impacto2.description") }}</p>
           </div>
         </div>
 
-        <div class="collapse collapse-arrow bg-white shadow-md rounded-lg overflow-hidden">
-          <input type="radio" name="my-accordion-2" />
+        <div class="collapse collapse-arrow bg-white shadow-lg rounded-lg overflow-hidden">
+          <input type="checkbox" />
           <div class="collapse-title text-lg md:text-xl font-semibold text-primary">
             {{ $t("impactos_clave.impactos.impacto3.title") }}
           </div>
-          <div class="collapse-content p-4 text-base md:text-lg text-gray-700">
+          <div class="collapse-content p-4 text-base md:text-lg text-gray-800 leading-relaxed">
             <p>{{ $t("impactos_clave.impactos.impacto3.description") }}</p>
           </div>
         </div>
@@ -59,5 +59,7 @@ import Activities from "./activities.vue";
 </template>
 
 <style scoped>
-
+.bg-opacity-80 {
+  background-color: rgba(255, 255, 255, 0.80);
+}
 </style>
