@@ -31,14 +31,18 @@ import Footer from "../components/structure/footer.vue";
         <!-- objetivos section -->
         <Objectives />
       </div>
-      <div class="max-w-screen-xl">
-        <!-- hitos section -->
-        <Hitos />
-        <!-- impactos section -->
-        <Impactos />
-        <!-- beneficios section -->
-        <Beneficios />
-      </div>
+    </div>
+    <div>
+      <!-- hitos section -->
+      <Hitos />
+    </div>
+    <!-- impactos section -->
+    <div class="w-full">
+      <Impactos />
+    </div>
+    <div>
+      <!-- beneficios section -->
+      <Beneficios />
     </div>
 
     <!-- Footer Section -->
