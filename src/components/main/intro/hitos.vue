@@ -56,9 +56,15 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="bg-primary rounded-xl shadow-xl min-h-screen w-screen flex flex-col items-center justify-center p-4">
-    <div class="w-full flex flex-col md:flex-row items-center justify-center p-4 gap-4">
-      <div class="flex w-full max-w-7xl h-[60vh] md:h-[80vh] lg:h-[80vh] gap-2 items-center justify-center">
+  <div
+    class="bg-primary rounded-xl shadow-xl min-h-screen w-screen flex flex-col items-center justify-center p-4"
+  >
+    <div
+      class="w-full flex flex-col md:flex-row items-center justify-center p-4 gap-4"
+    >
+      <div
+        class="flex w-full max-w-7xl h-[60vh] md:h-[80vh] lg:h-[80vh] gap-2 items-center justify-center"
+      >
         <div
           v-for="(panel, index) in panels"
           :key="index"
@@ -71,16 +77,27 @@ onMounted(() => {
             'min-w-[40px] block',
           ]"
         >
-          <img :src="panel.image" alt="" class="w-full h-full object-cover object-top" />
+          <img
+            :src="panel.image"
+            alt=""
+            class="w-full h-full object-cover object-top"
+          />
 
           <div
             v-if="expandedIndex === index"
             class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-60 text-white p-2 lg:p-4 text-center"
           >
-            <h2 class="text-sm md:text-lg lg:text-2xl font-bold mb-1 lg:mb-2">{{ panel.text }}</h2>
-            <p class="text-xs md:text-sm lg:text-lg mb-2 lg:mb-4">{{ panel.description }}</p>
+            <h2 class="text-sm md:text-lg lg:text-2xl font-bold mb-1 lg:mb-2">
+              {{ panel.text }}
+            </h2>
+            <p class="text-xs md:text-sm lg:text-lg mb-2 lg:mb-4">
+              {{ panel.description }}
+            </p>
             <a :href="panel.link" class="mt-2 lg:mt-4">
-              <Icon icon="mdi:plus" class="text-2xl md:text-3xl lg:text-4xl text-white hover:text-gray-300" />
+              <Icon
+                icon="mdi:plus"
+                class="text-2xl md:text-3xl lg:text-4xl text-white hover:text-gray-300"
+              />
             </a>
           </div>
 
@@ -96,7 +113,9 @@ onMounted(() => {
         </div>
       </div>
 
-      <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white text-center m-4">
+      <h2
+        class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-white text-center m-4"
+      >
         {{ $t("hitos.title") }}
       </h2>
     </div>

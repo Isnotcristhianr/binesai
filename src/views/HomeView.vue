@@ -6,6 +6,7 @@ import Intro from "../components/main/intro/intro.vue";
 import Objectives from "../components/main/intro/objetives.vue";
 import Hitos from "@/components/main/intro/hitos.vue";
 import Impactos from "@/components/main/intro/impactos.vue";
+import Beneficios from "@/components/main/intro/beneficios.vue";
 import Footer from "../components/structure/footer.vue";
 </script>
 
@@ -21,7 +22,7 @@ import Footer from "../components/structure/footer.vue";
       <sponsors />
     </div>
 
-    <div class=" max-w-screen-xl mx-auto">
+    <div class="max-w-screen-xl mx-auto">
       <div>
         <!-- intro section -->
         <Intro />
@@ -39,9 +40,13 @@ import Footer from "../components/structure/footer.vue";
     <div class="w-full">
       <Impactos />
     </div>
+    <div>
+      <!-- beneficios section -->
+      <Beneficios />
+    </div>
 
     <!-- Footer Section -->
-    <div >
+    <div>
       <Footer />
     </div>
   </main>
