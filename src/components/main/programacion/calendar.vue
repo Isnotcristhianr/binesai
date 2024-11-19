@@ -1,127 +1,145 @@
 <script setup lang="ts">
 //components
-import { createVuetify } from "vuetify";
-import { VCalendar } from "vuetify/labs/VCalendar";
-import { useDate } from "vuetify";
-import { ref, onMounted } from "vue";
-
-const vuetify = createVuetify({
-  components: {
-    VCalendar,
-  },
-});
-
-const focus = ref("");
-const today = ref(new Date());
-const events = ref<
-  { title: string; start: Date; end: Date; color: string; allDay: boolean }[]
->([]);
-const colors = [
-  "blue",
-  "indigo",
-  "deep-purple",
-  "cyan",
-  "green",
-  "orange",
-  "grey darken-1",
-];
-const names = [
-  "Meeting",
-  "Holiday",
-  "PTO",
-  "Travel",
-  "Event",
-  "Birthday",
-  "Conference",
-  "Party",
-];
-
-const getEventColor = (event: { color: string }) => {
-  return event.color;
-};
-
-const fetchEvents = ({ start, end }: { start: Date; end: Date }) => {
-  const eventList = [];
-
-  const min = start;
-  const max = end;
-  const days = (max.getTime() - min.getTime()) / 86400000;
-  const eventCount = rnd(days, days + 20);
-
-  for (let i = 0; i < eventCount; i++) {
-    const allDay = rnd(0, 3) === 0;
-    const firstTimestamp = rnd(min.getTime(), max.getTime());
-    const first = new Date(firstTimestamp - (firstTimestamp % 900000));
-    const secondTimestamp = rnd(2, allDay ? 288 : 8) * 900000;
-    const second = new Date(first.getTime() + secondTimestamp);
-
-    eventList.push({
-      title: names[rnd(0, names.length - 1)],
-      start: first,
-      end: second,
-      color: colors[rnd(0, colors.length - 1)],
-      allDay: !allDay,
-    });
-  }
-
-  events.value = eventList;
-};
-
-const rnd = (a: number, b: number) => {
-  return Math.floor((b - a + 1) * Math.random()) + a;
-};
-
-onMounted(() => {
-  const adapter = useDate();
-  fetchEvents({
-    start: adapter.startOfDay(adapter.startOfMonth(new Date())) as Date,
-    end: adapter.endOfDay(adapter.endOfMonth(new Date())) as Date,
-  });
-});
 </script>
 <template>
-  <v-row class="fill-height">
-    <v-col>
-      <v-sheet height="600">
-        <v-calendar
-          ref="calendar"
-          :events="events"
-          color="secondary"
-          type="month"
-        ></v-calendar>
-      </v-sheet>
-    </v-col>
-  </v-row>
+  <ul
+    class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical"
+  >
+    <li>
+      <div class="timeline-middle">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="h-5 w-5"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </div>
+      <div class="timeline-start mb-10 md:text-end">
+        <time class="font-mono italic">1984</time>
+        <div class="text-lg font-black">First Macintosh computer</div>
+        The Apple Macintosh—later rebranded as the Macintosh 128K—is the
+        original Apple Macintosh personal computer. It played a pivotal role in
+        establishing desktop publishing as a general office function. The
+        motherboard, a 9 in (23 cm) CRT monitor, and a floppy drive were housed
+        in a beige case with integrated carrying handle; it came with a keyboard
+        and single-button mouse.
+      </div>
+      <hr />
+    </li>
+    <li>
+      <hr />
+      <div class="timeline-middle">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="h-5 w-5"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </div>
+      <div class="timeline-end mb-10">
+        <time class="font-mono italic">1998</time>
+        <div class="text-lg font-black">iMac</div>
+        iMac is a family of all-in-one Mac desktop computers designed and built
+        by Apple Inc. It has been the primary part of Apple's consumer desktop
+        offerings since its debut in August 1998, and has evolved through seven
+        distinct forms
+      </div>
+      <hr />
+    </li>
+    <li>
+      <hr />
+      <div class="timeline-middle">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="h-5 w-5"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </div>
+      <div class="timeline-start mb-10 md:text-end">
+        <time class="font-mono italic">2001</time>
+        <div class="text-lg font-black">iPod</div>
+        The iPod is a discontinued series of portable media players and
+        multi-purpose mobile devices designed and marketed by Apple Inc. The
+        first version was released on October 23, 2001, about 8+1⁄2 months after
+        the Macintosh version of iTunes was released. Apple sold an estimated
+        450 million iPod products as of 2022. Apple discontinued the iPod
+        product line on May 10, 2022. At over 20 years, the iPod brand is the
+        oldest to be discontinued by Apple
+      </div>
+      <hr />
+    </li>
+    <li>
+      <hr />
+      <div class="timeline-middle">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="h-5 w-5"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </div>
+      <div class="timeline-end mb-10">
+        <time class="font-mono italic">2007</time>
+        <div class="text-lg font-black">iPhone</div>
+        iPhone is a line of smartphones produced by Apple Inc. that use Apple's
+        own iOS mobile operating system. The first-generation iPhone was
+        announced by then-Apple CEO Steve Jobs on January 9, 2007. Since then,
+        Apple has annually released new iPhone models and iOS updates. As of
+        November 1, 2018, more than 2.2 billion iPhones had been sold. As of
+        2022, the iPhone accounts for 15.6% of global smartphone market share
+      </div>
+      <hr />
+    </li>
+    <li>
+      <hr />
+      <div class="timeline-middle">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="h-5 w-5"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </div>
+      <div class="timeline-start mb-10 md:text-end">
+        <time class="font-mono italic">2015</time>
+        <div class="text-lg font-black">Apple Watch</div>
+        The Apple Watch is a line of smartwatches produced by Apple Inc. It
+        incorporates fitness tracking, health-oriented capabilities, and
+        wireless telecommunication, and integrates with iOS and other Apple
+        products and services
+      </div>
+    </li>
+  </ul>
 </template>
-<style scoped>
-/* Cambiar el color del título de los días */
-.v-calendar .v-calendar-daily__header {
-  color: #ffffff; /* Color blanco */
-  background-color: #b71c1c; /* Fondo rojo oscuro */
-}
-
-/* Cambiar el color de las letras del contenido del evento */
-.v-calendar .v-calendar-event {
-  color: #ffffff !important; /* Color de texto blanco */
-  background-color: #4caf50 !important; /* Fondo verde */
-  border-radius: 8px; /* Bordes redondeados */
-  padding: 4px 8px;
-}
-
-/* Cambiar el fondo de las celdas del calendario */
-.v-calendar .v-calendar-daily__day {
-  background-color: #f5f5f5; /* Fondo gris claro */
-  border: 1px solid #ddd; /* Bordes gris claro */
-}
-
-/* Resaltar el día actual */
-.v-calendar .v-calendar-daily__day--today {
-  background-color: #ffc107 !important; /* Fondo amarillo */
-  border-color: #ff9800; /* Borde naranja */
-}
-
-/* Cambiar color de los números de los días */
-.v-calendar .v-calendar-daily__day--outside {
-  color: #9e9e9e; /* Días fuera del mes en gris */
-}
-</style>
+<style scoped></style>
