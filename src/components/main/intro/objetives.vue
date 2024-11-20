@@ -8,11 +8,11 @@ import FlipCard from "./widgets/flipcard.vue";
   <div class="flex flex-col items-center justify-center p-6 min-h-screen">
     <!-- Objective title -->
     <h2
-      class="text-5xl md:text-7xl font-extrabold text-primary leading-tight md:leading-none md:text-right mb-8"
+      class="text-7xl font-extrabold text-primary leading-tight md:leading-none md:text-right mb-8"
     >
       {{ $t("objectives.title1") }}
     </h2>
-    <div class="flex-grow grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       <!-- Cards -->
       <FlipCard
         image="/imgs/objective1_card.jpg"

@@ -6,7 +6,7 @@ const title = "Beneficios para Auspiciantes";
 </script>
 
 <template>
-  <div class="flex flex-col items-center justify-center min-h-screen w-screen relative">
+  <div class="flex flex-col items-center justify-center h-screen w-screen relative ">
     <div class="absolute top-0 w-full h-[28vh] bg-primary text-white flex items-center justify-center rounded-lg">
       <!-- Título "Beneficios para Auspiciantes" -->
       <h1 class="text-5xl md:text-8xl font-extrabold text-center drop-shadow-lg">

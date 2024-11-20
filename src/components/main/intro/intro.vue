@@ -24,7 +24,7 @@ import Activities from "./activities.vue";
 
       <!-- Card Descripción -->
       <div class="flex items-center justify-center sm:justify-start">
-        <p class="text-base sm:text-lg leading-relaxed text-justify text-center sm:text-left">
+        <p class="text-base sm:text-lg leading-relaxed text-justify sm:text-left">
           {{ $t("intro.description.p1") }}
           <span class="font-semibold">
             {{ $t("intro.description.p2") }}
