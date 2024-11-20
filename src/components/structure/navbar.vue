@@ -6,25 +6,37 @@ import { Icon } from "@iconify/vue";
 
 // Componentes
 const { locale } = useI18n();
+const isOpen = ref(false);
 const toggleLocale = () => {
   locale.value = locale.value === "en" ? "es" : "en";
+};
+const toggleMenu = () => {
+  isOpen.value = !isOpen.value;
 };
 </script>
 
 <template>
-  <div class="fixed m-2 z-50 rounded bg-primary/30 backdrop-blur">
-    <div class="dropdown">
+  <div
+    :class="isOpen ? 'fixed inset-0 z-50 bg-primary/60 backdrop-blur-xl flex justify-center items-center' : 'fixed m-2 z-50 rounded bg-primary/30 backdrop-blur'"
+    @click="isOpen = false"
+  >
+    <div
+      class="dropdown"
+      @click.stop
+    >
       <div
         tabindex="0"
         role="button"
         class="btn btn-ghost flex items-center gap-2"
+        @click="toggleMenu"
       >
         <Icon icon="mdi:menu" class="text-white/80" />
         <span class="text-white/80">Menu</span>
       </div>
       <ul
+        v-if="isOpen"
         tabindex="0"
-        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+        class="menu menu-sm bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow flex flex-col items-center"
       >
         <li><router-link to="/">Inicio</router-link></li>
         <li><router-link to="/auspiciantes">Auspiciantes</router-link></li>
