@@ -8,6 +8,7 @@ import Hitos from "@/components/main/intro/hitos.vue";
 import Impactos from "@/components/main/intro/impactos.vue";
 import Beneficios from "@/components/main/intro/beneficios.vue";
 import Footer from "../components/structure/footer.vue";
+import Team from "@/components/main/intro/widgets/team.vue";
 </script>
 
 <template>
@@ -43,6 +44,10 @@ import Footer from "../components/structure/footer.vue";
     <div>
       <!-- beneficios section -->
       <Beneficios />
+    </div>
+    <div>
+      <!-- equipo section -->
+      <Team />
     </div>
 
     <!-- Footer Section -->

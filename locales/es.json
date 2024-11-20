@@ -110,9 +110,32 @@
         "description": "Vinculación con un evento que celebra el patrimonio artístico y promueve la educación y el intercambio cultural."
       },
       "beneficio3": {
-        "title": "Oportunidades de Networking",
-        "description": "Acceso a una red de artistas, críticos, autoridades culturales y líderes de la comunidad."
+        "title": "Oportunidad para Networking ",
+        "description": "Acceso a una red de artistas, críticos, autoridades culturales y líderes de la comunidad. "
       }
+    }
+  },
+  "team": {
+    "title": "Equipo de Trabajo",
+    "member1": {
+      "name": "María López",
+      "title": "CEO & Fundadora",
+      "description": "Experta en liderazgo y visión estratégica."
+    },
+    "member2": {
+      "name": "Juan Pérez",
+      "title": "Desarrollador Senior",
+      "description": "Apasionado por el código y la innovación tecnológica."
+    },
+    "member3": {
+      "name": "Ana García",
+      "title": "Diseñadora Gráfica",
+      "description": "Transforma ideas en experiencias visuales increíbles."
+    },
+    "member4": {
+      "name": "Carlos Gómez",
+      "title": "Especialista en Marketing",
+      "description": "Crea estrategias que conectan marcas con personas."
     }
   }
 }

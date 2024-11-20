@@ -10,12 +10,12 @@ const props = defineProps<{
 </script>
 <template>
   <div
-    class="card bg-gradient-to-r from-primary to-secondary text-neutral-content w-96 mx-auto p-5 rounded-lg drop-shadow-lg"
+    class="card bg-gradient-to-r from-primary to-secondary text-neutral-content w-full sm:w-96 mx-auto p-8 rounded-xl shadow-2xl transform transition-transform hover:scale-105"
     data-aos="fade-up"
   >
-    <div class="card-body">
-      <h2 class="card-title text-4xl font-extrabold ">{{ title }}</h2>
-      <p>{{ description }}</p>
+    <div class="card-body space-y-4">
+      <h2 class="card-title text-5xl font-extrabold min-w-full">{{ title }}</h2>
+      <p class="leading-relaxed min-w-full">{{ description }}</p>
     </div>
   </div>
 </template>
