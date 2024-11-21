@@ -5,12 +5,12 @@ import Activities from "./activities.vue";
 
 <template>
   <Activities />
-  <div class="flex flex-col items-center justify-center min-h-screen p-6">
-    <div class="grid md:grid-cols-2 gap-8 max-w-screen-lg w-full">
+  <div class="flex flex-col items-center justify-center min-h-screen p-4 sm:p-6">
+    <div class="grid gap-8 max-w-screen-lg w-full sm:grid-cols-2">
       <!-- Card Título -->
-      <div class="flex items-start md:justify-end">
+      <div class="flex items-start justify-center sm:justify-end">
         <h2
-          class="text-7xl font-extrabold text-primary leading-tight md:leading-none md:text-right"
+          class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-primary leading-tight text-center sm:text-right"
         >
           {{ $t("intro.title.p1") }}
           <br />
@@ -23,13 +23,12 @@ import Activities from "./activities.vue";
       </div>
 
       <!-- Card Descripción -->
-      <div class="flex items-center">
-        <p class="text-lg leading-relaxed text-justify">
+      <div class="flex items-center justify-center sm:justify-start">
+        <p class="text-base sm:text-lg leading-relaxed text-justify sm:text-left">
           {{ $t("intro.description.p1") }}
-          <span class="font-semibold 0">
+          <span class="font-semibold">
             {{ $t("intro.description.p2") }}
-            I</span
-          >
+          </span>
           {{ $t("intro.description.p3") }}
           <span class="font-semibold">
             {{ $t("intro.description.p4") }}

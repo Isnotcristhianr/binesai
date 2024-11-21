@@ -85,9 +85,9 @@ onMounted(() => {
 
           <div
             v-if="expandedIndex === index"
-            class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-60 text-white p-2 lg:p-4 text-center"
+            class="absolute inset-0 flex flex-col items-center justify-center bg-black/[.60] text-white p-2 lg:p-4 text-center"
           >
-            <h2 class="text-sm md:text-lg lg:text-2xl font-bold mb-1 lg:mb-2">
+            <h2 class="text-sm md:text-lg lg:text-2xl font-bold mb-1 lg:mb-2 ">
               {{ panel.text }}
             </h2>
             <p class="text-xs md:text-sm lg:text-lg mb-2 lg:mb-4">
@@ -103,7 +103,7 @@ onMounted(() => {
 
           <div
             v-else
-            class="absolute inset-0 flex items-center justify-center text-white text-xs md:text-sm lg:text-xl font-bold"
+            class="absolute inset-0 flex items-center justify-center text-gray-100 text-xs md:text-sm lg:text-xl font-bold border-2 border-black"
             :class="{
               'transform rotate-90 origin-center': expandedIndex !== index,
             }"

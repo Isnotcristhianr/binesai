@@ -113,6 +113,28 @@
                 "description": "Access to a network of artists, critics, cultural authorities, and leaders of the community."
             }
         }
+    },
+    "team": {
+        "title": "Working Team",
+        "member1": {
+            "name": "María López",
+            "title": "CEO & Founder",
+            "description": "Expert in leadership and strategic vision."
+        },
+        "member2": {
+            "name": "Juan Pérez",
+            "title": "Senior Developer",
+            "description": "Loves code and innovative technology."
+        },
+        "member3": {
+            "name": "Ana García",
+            "title": "Graphic Designer",
+            "description": "Transforms ideas into visually stunning experiences."
+        },
+        "member4": {
+            "name": "Carlos Gómez",
+            "title": "Marketing Specialist",
+            "description": "Creates strategies that connect brands with people."
+        }
     }
-
 }
