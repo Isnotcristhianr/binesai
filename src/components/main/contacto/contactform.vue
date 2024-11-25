@@ -23,18 +23,6 @@ const slides = [
     >
       <!-- Carrusel con fondo semitransparente -->
       <div class="relative w-[70%]">
-        <!-- Fondo blanco semitransparente -->
-<!--         <div class="absolute inset-0 bg-white/25 z-10"></div> -->
-
-        <!-- Logo centrado -->
-       <!--  <div class="absolute inset-0 flex justify-center items-center z-20">
-          <img
-            src="/imgs/Logo. Binesai transpaente.png"
-            alt="Logo"
-            class="w-20 h-20 object-contain"
-          />
-        </div> -->
-
         <!-- Carrusel funcional -->
         <v-carousel
           height="400"
@@ -112,6 +100,14 @@ const slides = [
       </button>
     </form>
   </div>
+  <div class="w-full h-60 mt-10 md:h-96 items-center justify-center border-r-8">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.744007640545!2d-78.11747378878707!3d0.3496980996453988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2a3d674c066b9f%3A0x12528cd14f0e3d5!2sCentro%20Cultural%20Tahuandos!5e0!3m2!1ses!2sec!4v1732554002808!5m2!1ses!2sec"
+      class="map-iframe"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
   <!-- modal -->
   <dialog id="my_modal_2" class="modal" :open="showModal">
     <div class="modal-box">
@@ -123,3 +119,10 @@ const slides = [
     </form>
   </dialog>
 </template>
+<style scoped>
+.map-iframe {
+  width: 100%;
+  height: 100%;
+  border: none; /* Eliminamos el borde */
+}
+</style>
