@@ -3,12 +3,15 @@
 import Navbar from "./components/structure/navbar.vue";
 </script>
 
-<template>
-  <header>
-    <Navbar />
-  </header>
+<template >
+  <div class="font-sans">
 
-  <main>
-    <RouterView />
-  </main>
+    <header>
+      <Navbar />
+    </header>
+  
+    <main class="bg-base-100">
+      <RouterView />
+    </main>
+  </div>
 </template>

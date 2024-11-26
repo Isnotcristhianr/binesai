@@ -1,0 +1,166 @@
+{
+    "setup": "Setup",
+    "navbar": {
+      "menu":{
+        "inicio": "Home",
+        "auspiciantes": "Sponsors",
+        "contacto": "Contact",
+        "programacion": "Program"
+      }
+    },
+    "hero":{
+        "title1": "BINESAI National Painting Biennial 2024",
+        "title2": "BINESAI",
+        "subtitle": "San Antonio de Ibarra",
+        "time":{
+            "days": "days",
+            "hours": "hours",
+            "minutes": "min",
+            "seconds": "sec"
+        }
+    },
+    "intro": {
+        "title": {
+            "p1": "Strengthening",
+            "p2": "the",
+            "p3": "sculptural",
+            "p4": "legacy"
+        },
+        "description": {
+            "p1": "The",
+            "p2": "8th National Sculpture Biennial of San Antonio de Ibarra BINESAI",
+            "p3": "is a great exhibition of art that has as its mission to make visible and strengthen the sculptural legacy of Ecuador. This project, to be held in 2025, aims to gather the main exponents of contemporary sculpture, ",
+            "p4": "promoting the dialogue between generations and the cultural exchange",
+            "p5": "between artists, students, master artists and the community. San Antonio de Ibarra, recognized for its sculptural tradition, will be the epicenter of this gathering that reunites art, culture and heritage, encouraging the creation of new forms and techniques in contemporary sculpture."
+          }
+    },
+    "dosier":{
+        "text": "All activities of the Biennial are free and open to the public.",
+        "down": "Download the Dossier"
+    },
+    "objectives": {
+        "title1": "Objectives of the BIENNAL",
+        "objective1": {
+            "title": "Visibilizing the Ecuadorian contemporary art",
+            "description": "Spreading the contemporary artistic proposals of national creators, strengthening their presence at the local and national level."
+        },
+        "objective2": {
+            "title": "Fostering education and cultural exchange",
+            "description": "Creating a space for students, master artists, and established artists to share their sculptural projects with the public."
+        },
+        "objective3": {
+            "title": "Promoting the cultural heritage of San Antonio de Ibarra",
+            "description": "Putting on the artistic and sculptural traditions of the region, linking the community and attracting cultural tourism through routes and open spaces."
+        }
+    },
+    "hitos": {
+        "title": "Hitos del evento",
+        "hitos": {
+            "hito1": {
+                "img": "/imgs/gallery_image1.jpg",
+                "title": " National Sculpture Contest",
+                "description": " Ecuadorian artists will compete to showcase their best sculptural proposals in the contemporary sculpture field."
+            },
+            "hito2": {
+                "img": "/imgs/gallery_image1.jpg",
+                "title": "First National Sculpture Contest for Students of Universities and Art Institutes",
+                "description": "Space for young talented artists to share their sculptural projects with the public."
+            },
+            "hito3": {
+                "img": "/imgs/gallery_image1.jpg",
+                "title": "First Maestro Artesano of Imbabura Meeting",
+                "description": "A tribute to the artistic tradition, strengthening the transmission of knowledge between masters and new generations."
+            },
+            "hito4": {
+                "img": "/imgs/gallery_image1.jpg",
+                "title": "Cultural Mediation",
+                "description": "Specialized workshops, dialogues, and conversations to foster reflection around sculpture and contemporary art."
+            },
+            "hito5": {
+                "img": "/imgs/gallery_image1.jpg",
+                "title": "Itinerant History of the Biennial Exhibition",
+                "description": "Walking through the most notable works of the past editions, bringing the Ecuadorian contemporary art to new audiences."
+            },
+            "hito6": {
+                "img": "/imgs/gallery_image1.jpg",
+                "title": "Open Routes and Open Spaces",
+                "description": "Specialized workshops, dialogues, and conversations to foster reflection around sculpture and contemporary art."
+            }
+        }
+    },
+    "impactos_clave": {
+        "title": "Key Impacts",
+        "impactos": {
+            "impacto1": {
+                "title": "Cultural and Economic Development",
+                "description": "The event strengthens the local identity and promotes cultural tourism in San Antonio de Ibarra."
+            },
+            "impacto2": {
+                "title": "Education and Promotion of Young Talents",
+                "description": "Fostering intergenerational dialogue between acclaimed artists and emerging artists."
+            },
+            "impacto3": {
+                "title": "International Visibility",
+                "description": "The BINESAI positions Ecuador as a reference to the contemporary sculpture in the global context."
+            }
+        }
+    },
+    "beneficios_auspiciantes": {
+        "title": "Benefits for Auspiciantes",
+        "beneficios": {
+            "beneficio1": {
+                "title": "Brand Visibility / Institution",
+                "description": "Exposure to a diverse and committed audience, both traditional and digital."
+            },
+            "beneficio2": {
+                "title": "Association with the Art and Culture",
+                "description": "Connection to an event that celebrates the artistic and cultural heritage."
+            },
+            "beneficio3": {
+                "title": "Networking Opportunities",
+                "description": "Access to a network of artists, critics, cultural authorities, and leaders of the community."
+            }
+        }
+    },
+    "team": {
+        "title": "Working Team",
+        "member1": {
+            "name": "María López",
+            "title": "CEO & Founder",
+            "description": "Expert in leadership and strategic vision."
+        },
+        "member2": {
+            "name": "Juan Pérez",
+            "title": "Senior Developer",
+            "description": "Loves code and innovative technology."
+        },
+        "member3": {
+            "name": "Ana García",
+            "title": "Graphic Designer",
+            "description": "Transforms ideas into visually stunning experiences."
+        },
+        "member4": {
+            "name": "Carlos Gómez",
+            "title": "Marketing Specialist",
+            "description": "Creates strategies that connect brands with people."
+        }
+    },
+    "contacto": {
+        "title": "CONTACT",
+        "form":{
+            "name":{
+                "label": "Full Name",
+                "placeholder": "Enter your full name"
+            },
+            "email":{
+                "label": "Email",
+                "placeholder": "Enter your email"
+            },
+            "message":{
+                "label": "Message",
+                "placeholder": "Enter your message"
+            },
+            "submit": "Send message"
+        }
+    }
+}

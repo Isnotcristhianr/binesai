@@ -1,0 +1,167 @@
+{
+  "setup": "Configuración",
+  "navbar": {
+    "menu":{
+      "inicio": "Inicio",
+      "auspiciantes": "Auspiciantes",
+      "contacto": "Contacto",
+      "programacion": "Programación"
+    }
+  },
+  "hero": {
+    "title1": "Bienal Nacional de Escultura",
+    "title2": "BINESAI",
+    "subtitle": "San Antonio de Ibarra",
+    "time": {
+      "days": "días",
+      "hours": "horas",
+      "minutes": "min",
+      "seconds": "seg"
+    }
+  },
+  "intro": {
+    "title": {
+      "p1": "Fortaleciendo",
+      "p2": "el legado",
+      "p3": "escultórico",
+      "p4": "ecuatoriano"
+    },
+    "description": {
+      "p1": "La",
+      "p2": "8va Bienal Nacional de Escultura San Antonio de Ibarra BINESAI",
+      "p3": "es una gran exhibición de arte que tiene como misión visibilizar y fortalecer el patrimonio escultórico del Ecuador. Este proyecto, a realizarse en 2025, busca reunir a los principales exponentes de la escultura contemporánea, ",
+      "p4": "promoviendo el diálogo entre generaciones y el intercambio cultural",
+      "p5": "entre artistas, estudiantes, maestros artesanos y la comunidad. San Antonio de Ibarra, reconocida por su tradición escultórica, será el epicentro de este encuentro que reúne arte, cultura y patrimonio, impulsando la creación de nuevas formas y técnicas en la escultura contemporánea."
+    }
+  },
+  "dosier":{
+    "text": "Todas las actividades de la Bienal son de acceso libre y gratuito",
+    "down": "Descarga el Dosier"
+  },
+  "objectives": {
+    "title1": "Objetivos de la BIENAL",
+    "objective1": {
+      "title": "Visibilizar el trabajo artístico ecuatoriano",
+      "description": "Difundir las propuestas escultóricas contemporáneas de creadores nacionales, fortaleciendo su presencia a nivel local y nacional."
+    },
+    "objective2": {
+      "title": "Fomentar la educación y el intercambio cultural",
+      "description": " Crear un espacio de encuentro y aprendizaje entre estudiantes, maestros artesanos y artistas consolidados, promoviendo la transmisión de saberes y experiencias entre generaciones."
+    },
+    "objective3": {
+      "title": " Promover el patrimonio cultural de San Antonio de Ibarra",
+      "description": " Poner en valor las tradiciones artesanales y artísticas de la región, vinculando a la comunidad y atrayendo turismo cultural mediante rutas y talleres abiertos."
+    }
+  },
+  "hitos": {
+    "title": "Hitos del evento",
+    "hitos": {
+      "hito1": {
+        "img": "/imgs/gallery_image1.jpg",
+        "title": " Concurso Nacional de Escultura",
+        "description": "Los creadores ecuatorianos competirán para mostrar sus mejores propuestas en el campo de la escultura contemporánea."
+      },
+      "hito2": {
+        "img": "/imgs/gallery_image1.jpg",
+        "title": "Primer Encuentro nacional de escultura para estudiantes de universidades e institutos de arte",
+        "description": "Espacio para que jóvenes talentos compartan sus proyectos escultóricos con el público."
+      },
+      "hito3": {
+        "img": "/imgs/gallery_image1.jpg",
+        "title": "Primer Encuentro de Maestros Artesanos de Imbabura",
+        "description": "Un homenaje a la tradición artesanal, fortaleciendo la transmisión de conocimientos entre maestros y nuevas generaciones."
+      },
+      "hito4": {
+        "img": "/imgs/gallery_image1.jpg",
+        "title": "Mediación Cultural",
+        "description": "Talleres especializados, diálogos y conversatorios para fomentar la reflexión en torno a la escultura y el arte contemporáneo."
+      },
+      "hito5": {
+        "img": "/imgs/gallery_image1.jpg",
+        "title": "Exposición Itinerante del Histórico de la Bienal",
+        "description": "Recorrido por las obras más destacadas de ediciones pasadas, llevando la escultura ecuatoriana a nuevos públicos."
+      },
+      "hito6": {
+        "img": "/imgs/gallery_image1.jpg",
+        "title": "Rutas y Talleres Abiertos",
+        "description": "Los talleres y casas culturales de San Antonio y del cantón Ibarra, abrirán sus puertas para que el público explore y viva el proceso de creación artística en su entorno natural."
+      }
+    }
+  },
+  "impactos_clave": {
+    "title": "Impactos Clave",
+    "impactos": {
+      "impacto1": {
+        "title": "Desarrollo Cultural y Económico",
+        "description": "El evento fortalece la identidad local y promueve el turismo cultural en San Antonio de Ibarra. "
+      },
+      "impacto2": {
+        "title": "Formación y Promoción de Jóvenes Talentos",
+        "description": "Fomenta el diálogo intergeneracional entre artistas consagrados y emergentes."
+      },
+      "impacto3": {
+        "title": "Visibilización Internacional",
+        "description": "La BINESAI posiciona a Ecuador como un referente de la escultura contemporánea en el ámbito global."
+      }
+    }
+  },
+  "beneficios_auspiciantes": {
+    "title": "Beneficios para Auspiciantes",
+    "beneficios": {
+      "beneficio1": {
+        "title": "Visibilidad de Marca / Institución",
+        "description": " Exposición a un público diverso y comprometido con la cultura, tanto en medios tradicionales como digitales."
+      },
+      "beneficio2": {
+        "title": "Asociación con el Arte y la Cultura",
+        "description": "Vinculación con un evento que celebra el patrimonio artístico y promueve la educación y el intercambio cultural."
+      },
+      "beneficio3": {
+        "title": "Oportunidad para Networking ",
+        "description": "Acceso a una red de artistas, críticos, autoridades culturales y líderes de la comunidad. "
+      }
+    }
+  },
+  "team": {
+    "title": "Equipo de Trabajo",
+    "member1": {
+      "name": "María López",
+      "title": "CEO & Fundadora",
+      "description": "Experta en liderazgo y visión estratégica."
+    },
+    "member2": {
+      "name": "Juan Pérez",
+      "title": "Desarrollador Senior",
+      "description": "Apasionado por el código y la innovación tecnológica."
+    },
+    "member3": {
+      "name": "Ana García",
+      "title": "Diseñadora Gráfica",
+      "description": "Transforma ideas en experiencias visuales increíbles."
+    },
+    "member4": {
+      "name": "Carlos Gómez",
+      "title": "Especialista en Marketing",
+      "description": "Crea estrategias que conectan marcas con personas."
+    }
+  }, 
+  "contacto": {
+    "title": "CONTACTO",
+    "form":{
+      "name":{
+        "label": "Nombre Completo",
+        "placeholder": "Ingresa tu nombre"
+      },
+      "email":{
+        "label": "Correo Electrónico",
+        "placeholder": "Ingresa tu correo electrónico"
+      },
+      "message":{
+        "label": "Mensaje",
+        "placeholder": "Ingresa tu mensaje"
+      },
+      "submit": "Enviar mensaje"
+    }
+  }
+ 
+}
