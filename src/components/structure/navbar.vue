@@ -38,10 +38,10 @@ const toggleMenu = () => {
         tabindex="0"
         class="menu menu-sm bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow flex flex-col items-center"
       >
-        <li><router-link to="/">Inicio</router-link></li>
-        <li><router-link to="/auspiciantes">Auspiciantes</router-link></li>
-        <li><router-link to="/contacto">Contacto</router-link></li>
-        <li><router-link to="/programacion">Programacion</router-link></li>
+        <li><router-link to="/">{{ $t("navbar.menu.inicio") }}</router-link></li>
+        <li><router-link to="/auspiciantes">{{ $t("navbar.menu.auspiciantes") }}</router-link></li>
+        <li><router-link to="/contacto">{{ $t("navbar.menu.contacto") }}</router-link></li>
+        <li><router-link to="/programacion">{{ $t("navbar.menu.programacion") }}</router-link></li>
         <li>
           <div class="divider"></div>
           <div class="flex flex-col items-start gap-2 p-2">

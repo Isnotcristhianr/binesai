@@ -1,6 +1,13 @@
 {
   "setup": "Configuración",
-
+  "navbar": {
+    "menu":{
+      "inicio": "Inicio",
+      "auspiciantes": "Auspiciantes",
+      "contacto": "Contacto",
+      "programacion": "Programación"
+    }
+  },
   "hero": {
     "title1": "Bienal Nacional de Escultura",
     "title2": "BINESAI",

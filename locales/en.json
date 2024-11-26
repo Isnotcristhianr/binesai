@@ -1,5 +1,13 @@
 {
     "setup": "Setup",
+    "navbar": {
+      "menu":{
+        "inicio": "Home",
+        "auspiciantes": "Sponsors",
+        "contacto": "Contact",
+        "programacion": "Program"
+      }
+    },
     "hero":{
         "title1": "BINESAI National Painting Biennial 2024",
         "title2": "BINESAI",
