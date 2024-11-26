@@ -6,7 +6,7 @@ import ContactoView from "@/components/main/contacto/contactform.vue";
 <template>
   <main class="flex flex-col min-h-screen">
     <!-- Encabezado -->
-    <Title :title="'CONTACTÁCTANOS'" />
+    <Title :title="'CONTACTO'" />
     <!-- Contenedor principal -->
     <div class="flex-grow shadow-inner mb-4 overflow-auto">
       <div class="container mx-auto px-4 py-6">
