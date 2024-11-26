@@ -13,33 +13,33 @@ import Countdown from "../../main/hero/countdown.vue";
       />
     </div>
 
-    <div
-      class="backdrop-blur-lg bg-opacity-20 bg-base-200 shadow-xl rounded-lg p-8 k mx-4 md:mx-0"
-    >
-      <div class="flex flex-col items-center w-full">
-        <!-- Logo and Text Container -->
-        <div class="flex items-center justify-center w-full mb-4">
-          <img
-            src="/imgs/Logo. Binesai transpaente.png"
-            alt="Description"
-            class="w-40 md:w-48"
-          />
+    <!-- Contenido principal centrado -->
+    <div class="relative z-10 flex flex-col items-center justify-between h-full py-12">
+      <!-- Contenedor central para logo y texto -->
+      <div class="flex flex-col items-center justify-center flex-grow">
+        <img
+          src="/imgs/Logo. Binesai transpaente.png"
+          alt="Description"
+          class="w-40 md:w-48 mb-6"
+        />
 
-          <div class="text-container max-w-2xl mx-auto text-center space-y-2">
-            <h2 class="text-xl md:text-3xl text-black">
-              {{ $t("hero.title1") }}
-            </h2>
-            <h2
-              class="text-5xl md:text-8xl font-extrabold text-black tracking-wider"
-            >
-              {{ $t("hero.title2") }}
-            </h2>
-            <h3 class="text-2xl md:text-4xl text-black w-full tracking-wider">
-              {{ $t("hero.subtitle") }}
-            </h3>
-          </div>
+        <div class="text-container text-center space-y-4">
+          <h2 class="text-xl md:text-3xl text-white">
+            {{ $t("hero.title1") }}
+          </h2>
+          <h2
+            class="text-5xl md:text-8xl font-extrabold text-white tracking-wider animate-pulse-slow"
+          >
+            {{ $t("hero.title2") }}
+          </h2>
+          <h3 class="text-2xl md:text-4xl text-white tracking-wider">
+            {{ $t("hero.subtitle") }}
+          </h3>
         </div>
-        <!-- Countdown -->
+      </div>
+
+      <!-- Countdown al final -->
+      <div class="mt-auto px-8 py-4 rounded-lg">
         <Countdown class="flex justify-center items-center" />
       </div>
     </div>
@@ -51,12 +51,11 @@ import Countdown from "../../main/hero/countdown.vue";
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 @keyframes pulse-slow {
-  0%,
-  100% {
+  0%, 100% {
     opacity: 1;
     text-shadow: 0 0 30px rgba(0, 0, 0, 1);
   }
@@ -71,16 +70,6 @@ import Countdown from "../../main/hero/countdown.vue";
 }
 
 :global(.light) .animate-pulse-slow {
-  text-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
-}
-
-@keyframes bounce {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+  text-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
 </style>

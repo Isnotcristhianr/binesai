@@ -105,7 +105,7 @@ onMounted(() => {
 
           <div
             v-else
-            class="absolute inset-0 flex items-center justify-center text-gray-100 text-xs sm:text-sm md:text-base lg:text-lg font-bold border border-black"
+            class="absolute inset-0 flex items-center justify-center text-gray-100 text-xs sm:text-sm md:text-base lg:text-lg font-bold"
             :class="{
               'transform rotate-90 origin-center': expandedIndex !== index,
             }"
