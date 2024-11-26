@@ -137,5 +137,24 @@
       "title": "Especialista en Marketing",
       "description": "Crea estrategias que conectan marcas con personas."
     }
+  }, 
+  "contacto": {
+    "title": "CONTACTO",
+    "form":{
+      "name":{
+        "label": "Nombre Completo",
+        "placeholder": "Ingresa tu nombre"
+      },
+      "email":{
+        "label": "Correo Electrónico",
+        "placeholder": "Ingresa tu correo electrónico"
+      },
+      "message":{
+        "label": "Mensaje",
+        "placeholder": "Ingresa tu mensaje"
+      },
+      "submit": "Enviar mensaje"
+    }
   }
+ 
 }

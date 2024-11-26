@@ -57,14 +57,14 @@ const slides = [
                 for="name" 
                 class="block text-sm font-medium text-gray-900 dark:text-white mb-1"
               >
-                Nombre completo
+              {{ $t("contacto.form.name.label") }}
               </label>
               <input
                 v-model="formData.name"
                 type="text"
                 id="name"
                 name="name"
-                placeholder="Ingresa tu nombre"
+                :placeholder="$t('contacto.form.name.placeholder')"
                 class="input input-bordered w-full bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-colors focus:ring-2 focus:ring-primary"
                 required
                 aria-required="true"
@@ -76,14 +76,14 @@ const slides = [
                 for="email" 
                 class="block text-sm font-medium text-gray-900 dark:text-white mb-1"
               >
-                Correo electrónico
+              {{ $t("contacto.form.email.label") }}
               </label>
               <input
                 v-model="formData.email"
                 type="email"
                 id="email"
                 name="email"
-                placeholder="tu@ejemplo.com"
+                :placeholder="$t('contacto.form.email.placeholder')"
                 class="input input-bordered w-full bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-colors focus:ring-2 focus:ring-primary"
                 required
                 aria-required="true"
@@ -94,14 +94,14 @@ const slides = [
               <label 
                 for="message" 
                 class="block text-sm font-medium text-gray-900 dark:text-white mb-1"
-              >
-                Mensaje
+                >
+                {{ $t("contacto.form.message.label") }}
               </label>
               <textarea
                 v-model="formData.message"
                 id="message"
                 name="message"
-                placeholder="¿En qué podemos ayudarte?"
+                :placeholder="$t('contacto.form.message.placeholder')"
                 class="textarea textarea-bordered w-full h-16 bg-white dark:bg-gray-800 text-gray-900 dark:text-white transition-colors focus:ring-2 focus:ring-primary"
                 required
                 aria-required="true"
@@ -113,7 +113,7 @@ const slides = [
             type="submit" 
             class="btn btn-primary w-full text-white font-medium transition-transform hover:scale-[1.02] active:scale-[0.98]"
           >
-            Enviar mensaje
+            {{ $t("contacto.form.submit") }}
           </button>
         </form>
       </div>

@@ -136,5 +136,23 @@
             "title": "Marketing Specialist",
             "description": "Creates strategies that connect brands with people."
         }
+    },
+    "contacto": {
+        "title": "CONTACT",
+        "form":{
+            "name":{
+                "label": "Full Name",
+                "placeholder": "Enter your full name"
+            },
+            "email":{
+                "label": "Email",
+                "placeholder": "Enter your email"
+            },
+            "message":{
+                "label": "Message",
+                "placeholder": "Enter your message"
+            },
+            "submit": "Send message"
+        }
     }
 }
