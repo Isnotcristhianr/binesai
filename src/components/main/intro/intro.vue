@@ -9,7 +9,7 @@ import Activities from "./activities.vue";
     <div class="grid gap-8 max-w-screen-lg w-full sm:grid-cols-2">
       <!-- Card Título -->
       <div class="flex flex-col items-end justify-center">
-        <h2
+        <h1
           class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-primary leading-tight text-right"
         >
           {{ $t("intro.title.p1") }}
@@ -19,7 +19,7 @@ import Activities from "./activities.vue";
           {{ $t("intro.title.p3") }}
           <br />
           {{ $t("intro.title.p4") }}
-        </h2>
+        </h1>
       </div>
 
       <!-- Card Descripción -->

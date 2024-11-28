@@ -7,7 +7,7 @@ import Countdown from "../../main/hero/countdown.vue";
     <!-- img fondo -->
     <div class="absolute top-0 left-0 w-full h-full object-cover z-0">
       <img
-        src="../../../assets/imgs/bg.png"
+        src="../../../assets/imgs/bg.webp"
         alt="background hero"
         class="w-full h-full object-cover z-0"
       />

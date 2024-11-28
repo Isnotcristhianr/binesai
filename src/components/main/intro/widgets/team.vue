@@ -57,7 +57,7 @@ const teamMembers = [
         <div class="relative h-128">
           <img
             :src="member.image"
-            alt=""
+            alt="member"
             class="w-full h-full"
             style="mask-image: linear-gradient(black 80%, transparent)"
           />
