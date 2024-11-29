@@ -8,9 +8,9 @@ const title = "Beneficios para Auspiciantes";
 <template>
   <div class="flex flex-col items-center justify-center min-h-screen w-full relative ">
     <div class="absolute top-0 w-full h-[28vh] bg-primary text-white flex items-center justify-center rounded-lg">
-      <h1 class="text-3xl md:text-5xl lg:text-8xl font-extrabold text-center drop-shadow-lg">
+      <h2 class="text-3xl md:text-5xl lg:text-8xl font-extrabold text-center drop-shadow-lg">
         {{ $t("beneficios_auspiciantes.title") }}
-      </h1>
+      </h2>
     </div>
     <div class="grid gap-6 md:gap-8 lg:gap-11 items-center justify-center w-full mt-[30vh]">
       <div

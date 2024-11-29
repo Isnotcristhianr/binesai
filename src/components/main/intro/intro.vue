@@ -1,8 +1,6 @@
 <script setup lang="ts">
-import { Icon } from "@iconify/vue";
-import Activities from "./activities.vue";
 </script>
-
+  
 <template>
   <Activities />
   <div class="flex flex-col items-center justify-center min-h-screen p-4 sm:p-6">

@@ -79,7 +79,7 @@ onMounted(() => {
         >
           <img
             :src="panel.image"
-            alt=""
+            alt="panel hito"
             class="w-full h-full object-cover object-center"
           />
 

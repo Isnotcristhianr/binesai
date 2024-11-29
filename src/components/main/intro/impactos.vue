@@ -6,7 +6,7 @@ import { Icon } from "@iconify/vue";
   <div
     class="relative flex flex-col items-center justify-center min-h-screen w-screen"
     style="
-      background-image: url(/imgs/bgImpactos.jpg);
+      background-image: url(/imgs/bgImpactos.webp);
       background-size: cover;
       background-position: center;
       background-size: 100% 100%;
