@@ -8,6 +8,7 @@
         v-for="img in imgArray"
         :key="img"
         :src="img"
+        :alt="img"
         class="marquee-img"
       />
     </Vue3Marquee>
@@ -25,7 +26,6 @@
     'https://sponsors.vuejs.org/images/vueschool.avif',
     'https://sponsors.vuejs.org/images/vehikl.avif',
     'https://sponsors.vuejs.org/images/dronahq.avif',
-    // Agrega más imágenes aquí si es necesario
   ]
   </script>
   

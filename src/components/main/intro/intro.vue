@@ -1,15 +1,13 @@
 <script setup lang="ts">
-import { Icon } from "@iconify/vue";
-import Activities from "./activities.vue";
 </script>
-
+  
 <template>
   <Activities />
   <div class="flex flex-col items-center justify-center min-h-screen p-4 sm:p-6">
     <div class="grid gap-8 max-w-screen-lg w-full sm:grid-cols-2">
       <!-- Card Título -->
       <div class="flex flex-col items-end justify-center">
-        <h1
+        <h2
           class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-primary leading-tight text-right"
         >
           {{ $t("intro.title.p1") }}
@@ -19,7 +17,7 @@ import Activities from "./activities.vue";
           {{ $t("intro.title.p3") }}
           <br />
           {{ $t("intro.title.p4") }}
-        </h1>
+        </h2>
       </div>
 
       <!-- Card Descripción -->

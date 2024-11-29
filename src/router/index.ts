@@ -10,7 +10,11 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
+      meta: {
+        ogTitle: "Bienvenido a la Bienal Nacional de Escultura San Antonio de Ibarra",
+        title: "Bienvenido a la Bienal Nacional de Escultura San Antonio de Ibarra",
+      },
     },
     {
       path: '/about',
@@ -18,25 +22,41 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
+      component: () => import('../views/AboutView.vue'),
+      meta: {
+        ogTitle: "Acerca de la Bienal Nacional de Escultura San Antonio de Ibarra",
+        title: "Acerca de la Bienal Nacional de Escultura San Antonio de Ibarra",
+      },
     },
     /* Programacion */
     {
       path: '/programacion',
       name: 'programacion',
-      component: ProgramacionView
+      component: ProgramacionView,
+      meta: {
+        ogTitle: "Programación de la Bienal Nacional de Escultura San Antonio de Ibarra",
+        title: "Programación de la Bienal Nacional de Escultura San Antonio de Ibarra",
+      },
     },
     /* Contacto */
     {
       path: '/contacto',
       name: 'contacto',
-      component: ContactoView
+      component: ContactoView,
+      meta: {
+        ogTitle: "Contacto con la Bienal Nacional de Escultura San Antonio de Ibarra",
+        title: "Contacto con la Bienal Nacional de Escultura San Antonio de Ibarra",
+      },
     },
     /* Auspiciantes */
     {
       path: '/auspiciantes',
       name: 'auspiciantes',
-      component: AuspiciantesView
+      component: AuspiciantesView,
+      meta: {
+        ogTitle: "Auspiciantes de la Bienal Nacional de Escultura San Antonio de Ibarra",
+        title: "Auspiciantes de la Bienal Nacional de Escultura San Antonio de Ibarra",
+      },
     },
 
   ]
