@@ -18,16 +18,19 @@ import FlipCard from "./widgets/flipcard.vue";
         image="/imgs/objective1_card.jpg"
         :title="$t('objectives.objective1.title')"
         :description="$t('objectives.objective1.description')"
+        alt="objetivo 1"        
       />
       <FlipCard
         image="/imgs/objective2_card.jpg"
         :title="$t('objectives.objective2.title')"
         :description="$t('objectives.objective2.description')"
+        alt="objetivo 2"        
       />
       <FlipCard
         image="/imgs/objective3_card.jpg"
         :title="$t('objectives.objective3.title')"
         :description="$t('objectives.objective3.description')"
+        alt="objetivo 3"        
       />
     </div>
   </div>

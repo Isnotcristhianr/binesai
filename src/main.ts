@@ -1,6 +1,6 @@
 import "./assets/main.css";
 
-import { createApp } from "vue";
+import { createApp, defineAsyncComponent } from "vue";
 import App from "./App.vue";
 import router from "./router";
 
@@ -45,5 +45,10 @@ app.use(i18n);
 
 //Vuetify
 app.use(vuetify);
+
+// Registrar componentes de forma diferida si son grandes
+app.component('LargeComponent', defineAsyncComponent(() => 
+  import('./components/main/hero/hero.vue')
+));
 
 app.mount("#app");
