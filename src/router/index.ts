@@ -3,7 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import AuspiciantesView from '../views/Auspiciantes.vue'
 import ContactoView from '../views/ContactoView.vue'
 import ProgramacionView from '../views/ProgramacionView.vue'
-
+import FormView from '../views/FormView.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -56,6 +56,16 @@ const router = createRouter({
       meta: {
         ogTitle: "Auspiciantes de la Bienal Nacional de Escultura San Antonio de Ibarra",
         title: "Auspiciantes de la Bienal Nacional de Escultura San Antonio de Ibarra",
+      },
+    },
+    /* Form */
+    {
+      path: '/inscripcion',
+      name: 'inscripcion',
+      component: FormView,
+      meta: {
+        ogTitle: "Inscripción a la Bienal Nacional de Escultura San Antonio de Ibarra",
+        title: "Inscripción a la Bienal Nacional de Escultura San Antonio de Ibarra",
       },
     },
 

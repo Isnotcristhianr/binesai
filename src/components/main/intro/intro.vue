@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Activities from './activities.vue';
 </script>
   
 <template>

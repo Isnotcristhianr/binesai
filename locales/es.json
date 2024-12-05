@@ -4,6 +4,7 @@
     "menu":{
       "inicio": "Inicio",
       "auspiciantes": "Auspiciantes",
+      "inscripcion": "Inscripción",
       "contacto": "Contacto",
       "programacion": "Programación"
     }
@@ -162,6 +163,11 @@
       },
       "submit": "Enviar mensaje"
     }
+  },
+  "form":{
+    "title": "Inscripción",
+    "description": "Regístrate para participar en la Bienal Nacional de Escultura",
+    "button": "Inscribirme"
   }
  
 }
