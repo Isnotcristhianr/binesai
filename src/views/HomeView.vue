@@ -48,7 +48,7 @@ import Form from "../components/main/form/form_component.vue";
       <!-- beneficios section -->
       <Beneficios />
     </div>
-    <div class="mb-8">
+    <div class="mb-8" hidden>
       <!-- equipo section -->
       <Team />
     </div>
