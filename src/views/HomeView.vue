@@ -52,10 +52,8 @@ import Form from "../components/main/form/form_component.vue";
       <!-- equipo section -->
       <Team />
     </div>
-
     <!-- Footer Section -->
-    <div class="mb-8">
       <Footer />
-    </div>
+
   </main>
 </template>
