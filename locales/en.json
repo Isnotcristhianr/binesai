@@ -4,6 +4,7 @@
       "menu":{
         "inicio": "Home",
         "auspiciantes": "Sponsors",
+        "inscripcion": "Inscription",
         "contacto": "Contact",
         "programacion": "Program"
       }
@@ -162,5 +163,10 @@
             },
             "submit": "Send message"
         }
+    },
+    "form":{
+        "title": "Inscription",
+        "description": "Register to participate in the National Sculpture Biennial",
+        "button": "Register"
     }
 }
