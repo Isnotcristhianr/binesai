@@ -1,69 +1,51 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
+import VueCountdown from "@chenfengyuan/vue-countdown";
 
-const targetDate = new Date("2025-04-01T00:00:00"); // Fecha objetivo
-
-// Variables reactivas para días, horas, minutos y segundos
-const daysRef = ref(0);
-const hoursRef = ref(0);
-const minutesRef = ref(0);
-const secondsRef = ref(0);
-
-// Función para actualizar el tiempo restante
-const updateTime = () => {
-  const now = new Date();
-  const timeDifference = targetDate.getTime() - now.getTime();
-
-  // Cálculo de los días, horas, minutos y segundos restantes
-  daysRef.value = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-  hoursRef.value = Math.floor(
-    (timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-  );
-  minutesRef.value = Math.floor(
-    (timeDifference % (1000 * 60 * 60)) / (1000 * 60)
-  );
-  secondsRef.value = Math.floor((timeDifference % (1000 * 60)) / 1000);
-};
-
-let countdownInterval: ReturnType<typeof setInterval>;
-
-// Al montar el componente, inicia el intervalo para actualizar cada segundo
-onMounted(() => {
-  updateTime(); // Llama la primera vez para que se muestren los valores iniciales
-  countdownInterval = setInterval(updateTime, 1000);
-});
-
-// Limpia el intervalo al desmontar el componente
-onUnmounted(() => {
-  clearInterval(countdownInterval);
-});
+const targetDate = new Date("2025-05-05T00:00:00"); // Fecha objetivo
 </script>
 
 <template>
-  <div class="grid auto-cols-max grid-flow-col gap-3 text-center">
-    <div class="bg-gray-300 text-primary shadow-lg rounded-box flex flex-col p-2">
-      <span class="countdown font-mono text-3xl">
-        <span :style="`--value:${Math.min(daysRef, 99)}`"></span>
-      </span>
-      {{ $t("hero.time.days") }}
-    </div>
-    <div class="bg-gray-300 text-primary shadow-lg rounded-box flex flex-col p-2">
-      <span class="countdown font-mono text-3xl">
-        <span :style="`--value:${hoursRef}`"></span>
-      </span>
-      {{ $t("hero.time.hours") }}
-    </div>
-    <div class="bg-gray-300 text-primary shadow-lg rounded-box flex flex-col p-2">
-      <span class="countdown font-mono text-3xl">
-        <span :style="`--value:${minutesRef}`"></span>
-      </span>
-      {{ $t("hero.time.minutes") }}
-    </div>
-    <div class="bg-gray-300 text-primary shadow-lg rounded-box flex flex-col p-2">
-      <span class="countdown font-mono text-3xl">
-        <span :style="`--value:${secondsRef}`"></span>
-      </span>
-      {{ $t("hero.time.seconds") }}
-    </div>
+  <div class="flex flex-col items-center gap-2">
+    <p class="text-2xl font-extrabold text-white">5 de Mayo de 2025</p>
+    <vue-countdown
+      :time="targetDate.getTime() - Date.now()"
+      v-slot="{ days, hours, minutes, seconds }"
+    >
+      <div class="grid auto-cols-max grid-flow-col gap-3 text-center">
+        <div
+          class="bg-gray-300 text-primary shadow-lg rounded-box flex flex-col p-2"
+        >
+          <span class="font-mono text-3xl">
+            {{ days }}
+          </span>
+          {{ $t("hero.time.days") }}
+        </div>
+        <div
+          class="bg-gray-300 text-primary shadow-lg rounded-box flex flex-col p-2 items-center"
+        >
+          <span class="countdown font-mono text-3xl">
+            {{ hours }}
+          </span>
+          {{ $t("hero.time.hours") }}
+        </div>
+        <div
+          class="bg-gray-300 text-primary shadow-lg rounded-box flex flex-col p-2"
+        >
+          <span class="countdown font-mono text-3xl">
+            {{ minutes }}
+          </span>
+          {{ $t("hero.time.minutes") }}
+        </div>
+        <div
+          class="bg-gray-300 text-primary shadow-lg rounded-box flex flex-col p-2"
+        >
+          <span class="countdown font-mono text-3xl">
+            {{ seconds }}
+          </span>
+          {{ $t("hero.time.seconds") }}
+        </div>
+      </div>
+    </vue-countdown>
   </div>
 </template>
