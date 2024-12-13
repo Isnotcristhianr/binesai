@@ -1,6 +1,8 @@
 <script setup lang="ts">
-/* Components */
-import Navbar from "@/components/structure/navbar.vue";
+/* Components */  
+import { defineAsyncComponent } from "vue";
+
+const Navbar = defineAsyncComponent(() => import("./components/structure/navbar.vue"));
 
 import { onMounted } from "vue";
 onMounted(() => {

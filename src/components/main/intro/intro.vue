@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import Activities from './activities.vue';
+import { defineAsyncComponent } from "vue";
+
+const Activities = defineAsyncComponent(() => import('./activities.vue'));
 </script>
   
 <template>

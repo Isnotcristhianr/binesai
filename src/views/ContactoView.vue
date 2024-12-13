@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import Footer from "../components/structure/footer.vue";
-import Title from "@/components/structure/title.vue";
-import ContactoView from "@/components/main/contacto/contactform.vue";
+import { defineAsyncComponent } from "vue";
+
+const Footer = defineAsyncComponent(() => import("../components/structure/footer.vue"));
+const Title = defineAsyncComponent(() => import("../components/structure/title.vue"));
+const ContactoView = defineAsyncComponent(() => import("../components/main/contacto/contactform.vue"));
 </script>
 <template>
   <main class="flex flex-col min-h-screen">

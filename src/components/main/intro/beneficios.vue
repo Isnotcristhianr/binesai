@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import { defineAsyncComponent } from "vue";
 import { Icon } from "@iconify/vue";
 import { ref, onMounted, onUnmounted } from "vue";
-import fadeupcard from "./widgets/fadeupcard.vue";
+
+const fadeupcard = defineAsyncComponent(() => import("./widgets/fadeupcard.vue"));
 const title = "Beneficios para Auspiciantes";
 </script>
 

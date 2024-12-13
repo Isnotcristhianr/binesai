@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { Icon } from "@iconify/vue";
-//widgets
-import FlipCard from "./widgets/flipcard.vue";
+import { defineAsyncComponent } from "vue";
+
+const FlipCard = defineAsyncComponent(() => import("./widgets/flipcard.vue"));
 </script>
 
 <template>

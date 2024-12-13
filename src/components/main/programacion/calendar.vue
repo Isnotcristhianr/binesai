@@ -1,8 +1,10 @@
 <script setup lang="ts">
-//components
-import Calendarevent from "./calendarevent.vue";
+import { defineAsyncComponent } from "vue";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+const Calendarevent = defineAsyncComponent(() => import("./calendarevent.vue"));
+
 AOS.init();
 
 const events = [
