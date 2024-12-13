@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { defineAsyncComponent } from 'vue'
 import HomeView from '../views/HomeView.vue'
 import AuspiciantesView from '../views/Auspiciantes.vue'
 import ContactoView from '../views/ContactoView.vue'
@@ -62,7 +63,7 @@ const router = createRouter({
     {
       path: '/inscripcion',
       name: 'inscripcion',
-      component: FormView,
+      component: defineAsyncComponent(() => import('../views/FormView.vue')),
       meta: {
         ogTitle: "Inscripción a la Bienal Nacional de Escultura San Antonio de Ibarra",
         title: "Inscripción a la Bienal Nacional de Escultura San Antonio de Ibarra",

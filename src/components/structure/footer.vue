@@ -1,5 +1,13 @@
-<script setup lang="ts">
-import { Icon } from "@iconify/vue";
+<script lang="ts">
+import { defineComponent } from 'vue'
+import { Icon } from "@iconify/vue"
+
+export default defineComponent({
+  name: 'Footer',
+  components: {
+    Icon
+  }
+})
 </script>
 
 <template>

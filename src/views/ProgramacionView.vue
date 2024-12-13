@@ -1,8 +1,9 @@
 <script setup lang="ts">
-//components
-import Calendar from "@/components/main/programacion/calendar.vue";
-import Title from "@/components/structure/title.vue";
-import Footer from "../components/structure/footer.vue";
+import { defineAsyncComponent } from "vue";
+
+const Calendar = defineAsyncComponent(() => import("../components/main/programacion/calendar.vue"));
+const Title = defineAsyncComponent(() => import("../components/structure/title.vue"));
+const Footer = defineAsyncComponent(() => import("../components/structure/footer.vue"));
 </script>
 <template>
   <main class="flex flex-col min-h-screen">
