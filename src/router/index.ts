@@ -4,11 +4,12 @@ import HomeView from '../views/HomeView.vue'
 import AuspiciantesView from '../views/Auspiciantes.vue'
 import ContactoView from '../views/ContactoView.vue'
 import ProgramacionView from '../views/ProgramacionView.vue'
-import FormView from '../views/FormView.vue'
+//fuera de pago
+import PagarView from '../views/Pagar.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    {
+  /*   {
       path: '/',
       name: 'home',
       component: HomeView,
@@ -16,6 +17,12 @@ const router = createRouter({
         ogTitle: "Bienvenido a la Bienal Nacional de Escultura San Antonio de Ibarra",
         title: "Bienvenido a la Bienal Nacional de Escultura San Antonio de Ibarra",
       },
+    }, */
+    //fuera de pago
+    {
+      path: '/',
+      name: 'home',
+      component: PagarView,
     },
     {
       path: '/about',

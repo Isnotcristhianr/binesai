@@ -17,7 +17,7 @@ export default defineComponent({
       <div class="text-start md:text-left">
         <p class="text-lg font-semibold">BINESAI</p>
         <p class="text-sm">© 2024 BINESAI. Todos los derechos reservados.</p>
-        <p class="text-xs">Desarrollado por <a href="https://www.isnotcristhianr.me/" target="_blank" class="link">IsnotCristianr.dev</a></p>
+        <p class="text-xs">Desarrollado por <a href="https://www.isnotcristhianr.dev/" target="_blank" class="link">IsnotCristianr.dev</a></p>
       </div>
     </div>
     <nav class="flex space-x-3 mt-4 md:mt-0 px-5">
