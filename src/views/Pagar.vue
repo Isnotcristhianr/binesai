@@ -39,7 +39,7 @@ const handlePago = async () => {
             <div class="space-y-4">
               <div class="text-center">
                 <p class="text-lg font-semibold mb-2">Desarrollador</p>
-                <a href="https://www.isnotcristhianr.dev" target="_blank" class="link text-xl">IsnotCristianr.dev</a>
+                <a href="https://www.isnotcristhianr.dev" target="_blank" class="link text-xl">IsnotCristhianr.dev</a>
               </div>
               
               <div class="alert alert-warning mt-4">
@@ -66,7 +66,7 @@ const handlePago = async () => {
               Desarrollado con ❤️ por
             </p>
             <a href="https://www.isnotcristhianr.dev/" target="_blank" class="link text-lg font-semibold block">
-              IsnotCristianr.dev
+              IsnotCristhianr.dev
             </a>
           </div>
         </div>
