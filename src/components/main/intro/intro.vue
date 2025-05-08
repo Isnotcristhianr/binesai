@@ -7,7 +7,7 @@ const Activities = defineAsyncComponent(() => import('./activities.vue'));
 <template>
   <Activities />
   <div class="flex items-center justify-center min-h-screen">
-    <div class="max-w-[1400px] w-full px-6 md:px-12 lg:px-16">
+    <div class="max-w-[1000px] w-full px-6 md:px-12 lg:px-16">
       <div class="grid md:grid-cols-[45%_55%] items-center">
         <!-- Título Principal a la izquierda -->
         <div>

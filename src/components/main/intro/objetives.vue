@@ -6,7 +6,7 @@ const FlipCard = defineAsyncComponent(() => import("./widgets/flipcard.vue"));
 
 <template>
   <div class="flex flex-col items-center justify-center min-h-screen px-6 md:px-12 lg:px-16">
-    <div class="max-w-[1400px] w-full">
+    <div class="max-w-[1000px] w-full">
       <!-- Título de Objetivos -->
       <h2 class="text-4xl md:text-5xl lg:text-6xl font-medium text-[#9B1C1F] mb-16">
         Objetivos de la Bienal

@@ -1,156 +1,149 @@
 <script setup lang="ts">
-import { Icon } from "@iconify/vue";
-import { ref, computed, onMounted } from "vue";
-import { useI18n } from "vue-i18n";
+import { ref, onMounted, onUnmounted } from "vue";
 
-const { t } = useI18n();
-
-const panels = [
+const hitos = [
   {
-    image: "/imgs/hitos/gallery_1.jpg",
-    text: computed(() => t("hitos.hitos.hito1.title")),
-    description: computed(() => t("hitos.hitos.hito1.description")),
-    link: "/about",
+    imagen: "/imgs/hitos/gallery_1.jpg",
+    titulo: "Concurso Nacional de Escultura",
+    descripcion: "Los creadores ecuatorianos competirán para mostrar sus mejores propuestas en el campo de la escultura contemporánea."
   },
   {
-    image: "/imgs/hitos/gallery_2.jpeg",
-    text: computed(() => t("hitos.hitos.hito2.title")),
-    description: computed(() => t("hitos.hitos.hito2.description")),
-    link: "/about",
+    imagen: "/imgs/hitos/gallery_2.jpeg",
+    titulo: "Primer Encuentro nacional de escultura para estudiantes",
+    descripcion: "Espacio para que jóvenes talentos compartan sus proyectos escultóricos con el público."
   },
   {
-    image: "/imgs/hitos/gallery_3.jpeg",
-    text: computed(() => t("hitos.hitos.hito3.title")),
-    description: computed(() => t("hitos.hitos.hito3.description")),
-    link: "/about",
+    imagen: "/imgs/hitos/gallery_3.jpeg",
+    titulo: "Mediación Cultural",
+    descripcion: "Talleres especializados, diálogos y conversatorios para fomentar la reflexión en torno a la escultura y el arte contemporáneo."
   },
   {
-    image: "/imgs/hitos/gallery_4.jpeg",
-    text: computed(() => t("hitos.hitos.hito4.title")),
-    description: computed(() => t("hitos.hitos.hito4.description")),
-    link: "/about",
+    imagen: "/imgs/hitos/gallery_4.jpeg",
+    titulo: "Exposición Itinerante del Histórico de la Bienal",
+    descripcion: "Recorrido por las obras más destacadas de ediciones pasadas, llevando la escultura ecuatoriana a nuevos públicos."
   },
   {
-    image: "/imgs/hitos/gallery_5.jpeg",
-    text: computed(() => t("hitos.hitos.hito5.title")),
-    description: computed(() => t("hitos.hitos.hito5.description")),
-    link: "/about",
-  },
-  {
-    image: "/imgs/hitos/gallery_6.jpeg",
-    text: computed(() => t("hitos.hitos.hito6.title")),
-    description: computed(() => t("hitos.hitos.hito6.description")),
-    link: "/about",
-  },
+    imagen: "/imgs/hitos/gallery_5.jpeg",
+    titulo: "Rutas y Talleres Abiertos",
+    descripcion: "Los talleres y casas culturales de San Antonio y del cantón Ibarra, abrirán sus puertas para que el público explore y viva el proceso de creación artística en su entorno natural."
+  }
 ];
 
-const expandedIndex = ref(Math.floor(Math.random() * panels.length));
+const hitoActivo = ref(0);
+let intervalo: number | null = null;
 
-const handleClick = (index: number) => {
-  expandedIndex.value = expandedIndex.value === index ? -1 : index;
+const seleccionarHito = (index: number) => {
+  hitoActivo.value = index;
+  reiniciarIntervalo();
+};
+
+const siguienteHito = () => {
+  hitoActivo.value = (hitoActivo.value + 1) % hitos.length;
+};
+
+const reiniciarIntervalo = () => {
+  if (intervalo) {
+    clearInterval(intervalo);
+  }
+  intervalo = setInterval(siguienteHito, 5000);
 };
 
 onMounted(() => {
-  // Additional behavior can be added here on component mount if needed.
+  reiniciarIntervalo();
+});
+
+onUnmounted(() => {
+  if (intervalo) {
+    clearInterval(intervalo);
+  }
 });
 </script>
 
 <template>
-  <div
-    class="bg-primary rounded-xl shadow-xl min-h-screen w-screen flex flex-col items-center justify-center p-2 sm:p-4"
-  >
-    <div
-      class="w-full flex flex-col-reverse md:flex-row items-center justify-center p-2 sm:p-4 gap-4"
-    >
-      <div
-        class="flex w-full max-w-7xl h-[60vh] md:h-[80vh] gap-1 sm:gap-2 items-center justify-center"
-      >
-        <div
-          v-for="(panel, index) in panels"
-          :key="index"
-          @click="handleClick(index)"
-          :class="[
-            'h-full rounded-xl sm:rounded-2xl bg-white cursor-pointer transition-all duration-500 ease-in-out overflow-hidden relative',
-            expandedIndex === index
-              ? 'w-[85%] sm:w-[80%] md:w-[55%] lg:w-[50%]'
-              : 'w-[15%] sm:w-[20%] md:w-[15%] lg:w-[10%] hover:bg-gray-200',
-            'min-w-[30px] sm:min-w-[40px] block',
-          ]"
-        >
-          <img
-            :src="panel.image"
-            alt="panel hito"
-            class="w-full h-full object-cover object-center"
-          />
+  <div class="py-20 bg-white">
+    <div class="max-w-[1000px] mx-auto px-4 sm:px-6">
+      <!-- Título -->
+      <h2 class="text-4xl font-light text-[#9B1C1F] mb-16 text-center">
+        Hitos del evento
+      </h2>
 
-          <div
-            v-if="expandedIndex === index"
-            class="absolute inset-0 flex flex-col items-center justify-center bg-black/[.75] text-white p-3 sm:p-4 lg:p-6 text-center overflow-y-auto"
-          >
-            <div class="max-w-[90%] sm:max-w-[85%] mx-auto">
-              <h2 class="text-base sm:text-lg md:text-xl lg:text-2xl font-bold mb-2 sm:mb-3">
-                {{ panel.text }}
-              </h2>
-              <p class="text-sm sm:text-base md:text-lg lg:text-xl mb-3 sm:mb-4 leading-tight sm:leading-relaxed">
-                {{ panel.description }}
-              </p>
-              <a :href="panel.link" class="mt-2 sm:mt-3 inline-block">
-                <Icon
-                  icon="mdi:plus"
-                  class="text-2xl sm:text-3xl md:text-4xl text-white hover:text-gray-300"
-                />
-              </a>
-            </div>
+      <div class="flex flex-col lg:flex-row gap-12">
+        <!-- Línea de tiempo -->
+        <div class="w-full lg:w-1/3">
+          <div class="space-y-4">
+            <button
+              v-for="(hito, index) in hitos"
+              :key="index"
+              @click="seleccionarHito(index)"
+              @mouseenter="seleccionarHito(index)"
+              class="w-full text-left p-4 rounded-lg transition-all duration-300 border-l-4"
+              :class="{
+                'border-[#9B1C1F] bg-gray-50 shadow-sm': hitoActivo === index,
+                'border-transparent hover:border-gray-200 hover:bg-gray-50': hitoActivo !== index
+              }"
+            >
+              <span 
+                class="block text-lg font-light"
+                :class="hitoActivo === index ? 'text-[#9B1C1F]' : 'text-gray-600'"
+              >
+                {{ hito.titulo }}
+              </span>
+            </button>
           </div>
+        </div>
 
-          <div
-            v-else
-            class="absolute inset-0 flex items-center justify-center text-gray-100 text-xs sm:text-sm md:text-base lg:text-lg font-bold"
-            :class="{
-              'transform rotate-90 origin-center': expandedIndex !== index,
-            }"
-          >
-            <span class="px-1">{{ panel.text }}</span>
+        <!-- Contenido del hito -->
+        <div class="w-full lg:w-2/3">
+          <div class="relative aspect-[16/9] mb-8 overflow-hidden rounded-lg shadow-lg">
+            <img
+              v-for="(hito, index) in hitos"
+              :key="index"
+              :src="hito.imagen"
+              :alt="hito.titulo"
+              class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500"
+              :class="{
+                'opacity-100': hitoActivo === index,
+                'opacity-0': hitoActivo !== index
+              }"
+            />
+          </div>
+          <div class="space-y-4">
+            <p class="text-gray-600 leading-relaxed text-lg">
+              {{ hitos[hitoActivo].descripcion }}
+            </p>
           </div>
         </div>
       </div>
-
-      <h2
-        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white text-center m-2 sm:m-4"
-      >
-        {{ $t("hitos.title") }}
-      </h2>
     </div>
   </div>
 </template>
 
 <style scoped>
-.transform.rotate-90 {
-  transform: rotate(90deg);
-  text-align: center;
-  white-space: nowrap;
+/* Optimizaciones de rendimiento */
+img {
+  will-change: transform, opacity;
 }
 
-.origin-center {
-  transform-origin: center;
+.container {
+  contain: content;
 }
 
-/* Añadir estilos para el scroll suave */
-.overflow-y-auto {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+/* Transiciones suaves */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
 }
 
-.overflow-y-auto::-webkit-scrollbar {
-  width: 4px;
-}
-
-.overflow-y-auto::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.overflow-y-auto::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 20px;
+/* Reducción de movimiento si el usuario lo prefiere */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+  
+  img {
+    transition: none !important;
+  }
 }
 </style>
