@@ -30,7 +30,7 @@ onMounted(() => {
       <Navbar />
     </header>
     <h1 hidden>Binesai: Bienal Nacional de Escultura San Antonio de Ibarra</h1>
-    <main class="bg-base-100">
+    <main >
       <RouterView />
     </main>
   </div>
