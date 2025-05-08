@@ -32,7 +32,7 @@
 
       <!-- Organizadores -->
       <div class="w-full max-w-xl mx-auto mb-8 px-4">
-        <h2 class="text-center text-lg sm:text-xl md:text-2xl text-[#1E1E1E] mb-6">Organizadores:</h2>
+        <h2 class="text-center text-lg sm:text-xl md:text-2xl text-[#1E1E1E] mb-6">Organizan:</h2>
         <div class="flex flex-row justify-center items-center gap-4 sm:gap-8 md:gap-12">
           <!-- Organizador 1 -->
           <div class="flex items-center justify-center w-1/3">

@@ -27,7 +27,8 @@ const auspiciantes = [
   { nombre: 'CC Tahuandos', imagen: '/imgs/sponsors/7_cctahuandos.png' },
   { nombre: 'CC Imbabura', imagen: '/imgs/sponsors/8_ccimbabura.png' },
   { nombre: 'Flora P', imagen: '/imgs/sponsors/9_florap.png' },
-  { nombre: 'Caran', imagen: '/imgs/sponsors/10_caran.png' }
+  { nombre: 'Caran', imagen: '/imgs/sponsors/10_caran.png' },
+  { nombre: 'Cerelectric', imagen: '/imgs/sponsors/11_cerelectric.png' }
 ];
 </script>
 

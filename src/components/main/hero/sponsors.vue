@@ -35,6 +35,7 @@
     '/imgs/sponsors/8_ccimbabura.png',
     '/imgs/sponsors/9_florap.png',
     '/imgs/sponsors/10_caran.png',
+    '/imgs/sponsors/11_cerelectric.png',
   ]
   </script>
   
