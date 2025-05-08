@@ -10,7 +10,6 @@ const Impactos = defineAsyncComponent(() => import("../components/main/intro/imp
 const Beneficios = defineAsyncComponent(() => import("../components/main/intro/beneficios.vue"));
 const Footer = defineAsyncComponent(() => import("../components/structure/footer.vue"));
 const Team = defineAsyncComponent(() => import("../components/main/intro/widgets/team.vue"));
-const Form = defineAsyncComponent(() => import("../components/main/form/form_component.vue"));
 </script>
 
 <template>
@@ -30,8 +29,6 @@ const Form = defineAsyncComponent(() => import("../components/main/form/form_com
         <!-- intro section -->
         <Intro />
       </div>
-      <!-- form section -->
-      <Form />
       <div>
         <!-- objetivos section -->
         <Objectives />

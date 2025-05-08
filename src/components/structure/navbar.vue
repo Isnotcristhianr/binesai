@@ -6,51 +6,62 @@ import { Icon } from "@iconify/vue";
 const isOpen = ref(false);
 const menuItems = [
   { to: '/', text: 'Inicio' },
-  { to: '/inscripcion', text: 'Inscripción' },
   { to: '/auspiciantes', text: 'Auspiciantes' },
-  { to: '/programacion', text: 'Programación' }
+  { to: '/programacion', text: 'Programación' },
+  { to: '/contacto', text: 'Contacto' }
 ];
 
 const toggleMenu = () => {
   isOpen.value = !isOpen.value;
+  if (isOpen.value) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = 'auto';
+  }
 };
 </script>
 
 <template>
   <div class="relative">
-    <!-- Navbar minimalista -->
-    <nav class="fixed top-0 left-0 right-0 z-40">
+    <!-- Navbar minimalista con efecto glass -->
+    <nav class="fixed top-0 left-0 right-0 z-40 navbar-glass">
       <div class="container mx-auto">
         <div class="flex items-center justify-between h-20 px-6">
-          <!-- Menú y logo integrados -->
-          <div class="flex items-center gap-8">
-            <button
-              class="text-2xl text-gray-800 hover:text-gray-600 transition-colors"
-              @click="toggleMenu"
-            >
-              <Icon :icon="isOpen ? 'mdi:close' : 'mdi:menu'" />
-            </button>
-            <span class="text-2xl font-light tracking-wider">
+          <!-- Botón menú -->
+          <button
+            class="text-2xl text-gray-800 hover:text-[#9B1C1F] transition-colors z-50"
+            @click="toggleMenu"
+          >
+            <Icon :icon="isOpen ? 'mdi:close' : 'mdi:menu'" />
+          </button>
+
+          <!-- Logo centrado -->
+          <div class="absolute left-1/2 transform -translate-x-1/2">
+            <span class="text-2xl font-light tracking-[0.2em] text-gray-900">
               BINESAI
             </span>
           </div>
+
+          <!-- Elemento fantasma para mantener el espaciado -->
+          <div class="w-8"></div>
         </div>
       </div>
     </nav>
 
-    <!-- Menú overlay minimalista -->
+    <!-- Menú overlay a pantalla completa -->
     <div
       v-show="isOpen"
-      class="fixed inset-0 z-30 bg-white"
+      class="fixed inset-0 z-30 bg-white transition-opacity duration-300"
+      :class="{ 'opacity-100': isOpen, 'opacity-0': !isOpen }"
     >
-      <div class="h-screen flex flex-col items-start justify-center px-16">
-        <div class="space-y-12">
+      <div class="h-screen flex flex-col items-center justify-center px-8">
+        <div class="space-y-12 text-center">
           <router-link
             v-for="item in menuItems"
             :key="item.to"
             :to="item.to"
             @click="toggleMenu"
-            class="block text-4xl font-light tracking-wide text-gray-900 hover:text-gray-600 transition-colors"
+            class="block text-4xl font-light tracking-wide text-gray-900 hover:text-[#9B1C1F] transition-all duration-300 transform hover:scale-105"
           >
             {{ item.text }}
           </router-link>
@@ -61,22 +72,19 @@ const toggleMenu = () => {
 </template>
 
 <style scoped>
-.router-link-active {
-  color: #000;
-}
-
-/* Efecto glass sutil */
-nav {
+.navbar-glass {
   background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Animaciones suaves */
 .router-link-active {
-  position: relative;
+  color: #9B1C1F;
+  font-weight: 400;
 }
 
+/* Animación suave para el underline */
 .router-link-active::after {
   content: '';
   position: absolute;
@@ -84,6 +92,18 @@ nav {
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: currentColor;
+  background-color: #9B1C1F;
+  transform: scaleX(1);
+  transition: transform 0.3s ease;
+}
+
+/* Animación para el menú */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.router-link-active {
+  animation: fadeIn 0.5s ease forwards;
 }
 </style>

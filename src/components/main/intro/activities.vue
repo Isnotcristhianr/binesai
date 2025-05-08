@@ -3,7 +3,7 @@ import { Icon } from "@iconify/vue";
 </script>
 
 <template>
-  <div class="flex justify-center py-12">
+  <div class="flex justify-center py-12 m-8">
     <div class="group relative inline-flex flex-col items-center gap-6 hover:cursor-pointer">
       <!-- Texto descriptivo -->
       <span class="text-xl font-light tracking-wide text-gray-800">
