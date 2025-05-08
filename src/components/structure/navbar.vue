@@ -18,51 +18,39 @@ const toggleMenu = () => {
 
 <template>
   <div class="relative">
-    <!-- Navbar fijo -->
-    <nav class="fixed top-0 left-0 right-0 z-40 glass border-b">
+    <!-- Navbar minimalista -->
+    <nav class="fixed top-0 left-0 right-0 z-40">
       <div class="container mx-auto">
-        <div class="flex items-center justify-between h-16 px-4">
-          <!-- Botón menú -->
-         <!--  <button
-            class="text-2xl"
-            @click="toggleMenu"
-          >
-            ☰
-          </button> -->
-
-          <!-- Logo central -->
-          <div class="absolute left-1/2 transform -translate-x-1/2 mr-8">
+        <div class="flex items-center justify-between h-20 px-6">
+          <!-- Menú y logo integrados -->
+          <div class="flex items-center gap-8">
             <button
-            class="text-2xl"
-            @click="toggleMenu"
-          >
-            ☰
-          </button>
-          
-            <span class="text-2xl font-normal">
+              class="text-2xl text-gray-800 hover:text-gray-600 transition-colors"
+              @click="toggleMenu"
+            >
+              <Icon :icon="isOpen ? 'mdi:close' : 'mdi:menu'" />
+            </button>
+            <span class="text-2xl font-light tracking-wider">
               BINESAI
             </span>
           </div>
-
-          <!-- Espacio para simetría -->
-          <div class="w-8"></div>
         </div>
       </div>
     </nav>
 
-    <!-- Menú overlay -->
+    <!-- Menú overlay minimalista -->
     <div
       v-show="isOpen"
-      class="fixed inset-0 z-50 bg-[#F5F5F5]"
+      class="fixed inset-0 z-30 bg-white"
     >
-      <div class="h-screen flex flex-col items-center justify-center">
+      <div class="h-screen flex flex-col items-start justify-center px-16">
         <div class="space-y-12">
           <router-link
             v-for="item in menuItems"
             :key="item.to"
             :to="item.to"
             @click="toggleMenu"
-            class="block text-4xl text-center text-gray-900 hover:text-gray-600"
+            class="block text-4xl font-light tracking-wide text-gray-900 hover:text-gray-600 transition-colors"
           >
             {{ item.text }}
           </router-link>
@@ -73,19 +61,29 @@ const toggleMenu = () => {
 </template>
 
 <style scoped>
-/* Animaciones suaves */
 .router-link-active {
   color: #000;
-  font-weight: 500;
 }
 
-/* Optimización de rendimiento */
+/* Efecto glass sutil */
 nav {
-  contain: content;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
-/* Prevenir scroll cuando el menú está abierto */
-:root {
-  overflow: hidden;
+/* Animaciones suaves */
+.router-link-active {
+  position: relative;
+}
+
+.router-link-active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
 }
 </style>
