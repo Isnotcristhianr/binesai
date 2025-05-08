@@ -3,7 +3,7 @@
 
 <template>
   <div class="hero min-h-screen bg-white relative">
-    
+
     <!-- Contenido principal -->
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-screen flex flex-col">
       <!-- Logo y título centrados -->
@@ -24,6 +24,8 @@
             <h2 class="text-lg sm:text-xl md:text-2xl text-[#1E1E1E]">Bienal Nacional de Escultura</h2>
             <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#1E1E1E] my-2">BINESAI</h1>
             <h3 class="text-xl sm:text-2xl md:text-3xl text-[#1E1E1E]">San Antonio de Ibarra</h3>
+            <br>
+            <h5 class="text-xs font-semibold sm:text-xs md:text-lg text-[#1E1E1E]">Del 03 al 31 de mayo</h5>
           </div>
         </div>
       </div>
