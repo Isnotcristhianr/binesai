@@ -1,89 +1,91 @@
 <script setup lang="ts">
 // Vue
 import { ref } from "vue";
-import { useI18n } from "vue-i18n";
 import { Icon } from "@iconify/vue";
 
-// Componentes
-const { locale } = useI18n();
 const isOpen = ref(false);
-const toggleLocale = () => {
-  locale.value = locale.value === "en" ? "es" : "en";
-  isOpen.value = false;
-};
+const menuItems = [
+  { to: '/', text: 'Inicio' },
+  { to: '/inscripcion', text: 'Inscripción' },
+  { to: '/auspiciantes', text: 'Auspiciantes' },
+  { to: '/programacion', text: 'Programación' }
+];
+
 const toggleMenu = () => {
   isOpen.value = !isOpen.value;
-};
-const closeMenu = () => {
-  isOpen.value = false;
 };
 </script>
 
 <template>
-  <div
-    :class="
-      isOpen
-        ? 'fixed inset-0 z-50 bg-primary/60 backdrop-blur-xl flex justify-center items-center'
-        : 'fixed m-2 z-50 rounded bg-primary/30 backdrop-blur'
-    "
-    @click="isOpen = false"
-  >
-    <div class="dropdown" @click.stop>
-      <div
-        tabindex="0"
-        role="button"
-        class="btn btn-ghost flex items-center gap-2 text-2xl"
-        @click="toggleMenu"
-      >
-        <Icon icon="mdi:menu" class="text-white/80 text-xl" />
-        <span class="text-white/80">Menu</span>
-      </div>
-      <ul
-        v-if="isOpen"
-        tabindex="0"
-        class="menu menu-sm bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow flex flex-col items-center"
-      >
-        <li>
-          <router-link @click="closeMenu" to="/" class="text-lg">{{ $t("navbar.menu.inicio") }}</router-link>
-        </li>
-        <li>
-          <router-link @click="closeMenu" to="/inscripcion" class="text-lg">{{
-            $t("navbar.menu.inscripcion")
-          }}</router-link>
-        </li>
-        <li>
-          <router-link @click="closeMenu" to="/auspiciantes" class="text-lg">{{
-            $t("navbar.menu.auspiciantes")
-          }}</router-link>
-        </li>
-        <li>
-          <router-link @click="closeMenu" to="/contacto" class="text-lg">{{
-            $t("navbar.menu.contacto")
-          }}</router-link>
-        </li>
-        <li>
-          <router-link @click="closeMenu" to="/programacion" class="text-lg">{{
-            $t("navbar.menu.programacion")
-          }}</router-link>
-        </li>
-        <li>
-          <div class="divider"></div>
-          <div class="flex flex-col items-start gap-2 p-2">
-            <div class="flex items-center gap-2">
-              <Icon icon="mdi:tools" class="text-gray-500 text-lg" />
-              <span class="text-gray-500 text-lg">{{ $t("setup") }}</span>
-            </div>
+  <div class="relative">
+    <!-- Navbar fijo -->
+    <nav class="fixed top-0 left-0 right-0 z-40 glass border-b">
+      <div class="container mx-auto">
+        <div class="flex items-center justify-between h-16 px-4">
+          <!-- Botón menú -->
+         <!--  <button
+            class="text-2xl"
+            @click="toggleMenu"
+          >
+            ☰
+          </button> -->
+
+          <!-- Logo central -->
+          <div class="absolute left-1/2 transform -translate-x-1/2 mr-8">
             <button
-              @click="toggleLocale"
-              class="btn btn-ghost w-full text-left flex items-center justify-between gap-2"
-            >
-              <Icon icon="mdi:translate" class="text-gray-500 text-lg" /><span class="text-lg">{{
-                locale === "es" ? "Español" : "English"
-              }}</span>
-            </button>
+            class="text-2xl"
+            @click="toggleMenu"
+          >
+            ☰
+          </button>
+          
+            <span class="text-2xl font-normal">
+              BINESAI
+            </span>
           </div>
-        </li>
-      </ul>
+
+          <!-- Espacio para simetría -->
+          <div class="w-8"></div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Menú overlay -->
+    <div
+      v-show="isOpen"
+      class="fixed inset-0 z-50 bg-[#F5F5F5]"
+    >
+      <div class="h-screen flex flex-col items-center justify-center">
+        <div class="space-y-12">
+          <router-link
+            v-for="item in menuItems"
+            :key="item.to"
+            :to="item.to"
+            @click="toggleMenu"
+            class="block text-4xl text-center text-gray-900 hover:text-gray-600"
+          >
+            {{ item.text }}
+          </router-link>
+        </div>
+      </div>
     </div>
   </div>
 </template>
+
+<style scoped>
+/* Animaciones suaves */
+.router-link-active {
+  color: #000;
+  font-weight: 500;
+}
+
+/* Optimización de rendimiento */
+nav {
+  contain: content;
+}
+
+/* Prevenir scroll cuando el menú está abierto */
+:root {
+  overflow: hidden;
+}
+</style>

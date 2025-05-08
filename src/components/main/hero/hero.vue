@@ -3,13 +3,7 @@
 
 <template>
   <div class="hero min-h-screen bg-white relative">
-    <!-- Menú superior -->
-    <div class="absolute top-4 left-4 z-10">
-      <button class="px-4 py-2 bg-[#D9D9D9] rounded-lg text-white">
-        Menu
-      </button>
-    </div>
-
+    
     <!-- Contenido principal -->
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-screen flex flex-col">
       <!-- Logo y título centrados -->
