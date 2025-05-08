@@ -13,7 +13,7 @@ onMounted(() => {
         "@type": "Organization",
         "name": "BINESAI",
         "url": "https://binesai.com",
-        "logo": "https://binesai.com/imgs/Logo BINESAI.png",
+        "logo": "https://binesai.com/icons/Logo BINESAI-Horizontal_9.jpg",
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": "+593-999999999",

@@ -9,7 +9,7 @@ import PagarView from '../views/Pagar.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-  /*   {
+    {
       path: '/',
       name: 'home',
       component: HomeView,
@@ -17,13 +17,13 @@ const router = createRouter({
         ogTitle: "Bienvenido a la Bienal Nacional de Escultura San Antonio de Ibarra",
         title: "Bienvenido a la Bienal Nacional de Escultura San Antonio de Ibarra",
       },
-    }, */
+    }, 
     //fuera de pago
-    {
+   /*  {
       path: '/',
       name: 'home',
       component: PagarView,
-    },
+    }, */
     {
       path: '/about',
       name: 'about',
