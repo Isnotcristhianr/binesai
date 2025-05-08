@@ -7,7 +7,6 @@ const Intro = defineAsyncComponent(() => import("../components/main/intro/intro.
 const Objectives = defineAsyncComponent(() => import("../components/main/intro/objetives.vue"));
 const Hitos = defineAsyncComponent(() => import("../components/main/intro/hitos.vue"));
 const Impactos = defineAsyncComponent(() => import("../components/main/intro/impactos.vue"));
-const Beneficios = defineAsyncComponent(() => import("../components/main/intro/beneficios.vue"));
 const Footer = defineAsyncComponent(() => import("../components/structure/footer.vue"));
 const Team = defineAsyncComponent(() => import("../components/main/intro/widgets/team.vue"));
 </script>
@@ -41,10 +40,6 @@ const Team = defineAsyncComponent(() => import("../components/main/intro/widgets
     <!-- impactos section -->
     <div class="w-full mb-8">
       <Impactos />
-    </div>
-    <div class="mb-8">
-      <!-- beneficios section -->
-      <Beneficios />
     </div>
     <div class="mb-8" hidden>
       <!-- equipo section -->

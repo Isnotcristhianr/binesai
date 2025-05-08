@@ -63,7 +63,7 @@ onUnmounted(() => {
   <div class="py-20 bg-white">
     <div class="max-w-[1000px] mx-auto px-4 sm:px-6">
       <!-- Título -->
-      <h2 class="text-4xl font-light text-[#9B1C1F] mb-16 text-center">
+      <h2 class="text-4xl font-medium text-[#9B1C1F] mb-16 text-center">
         Hitos del evento
       </h2>
 
@@ -83,7 +83,7 @@ onUnmounted(() => {
               }"
             >
               <span 
-                class="block text-lg font-light"
+                class="block text-lg font-lightm"
                 :class="hitoActivo === index ? 'text-[#9B1C1F]' : 'text-gray-600'"
               >
                 {{ hito.titulo }}
