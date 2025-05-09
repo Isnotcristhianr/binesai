@@ -7,8 +7,9 @@ const isOpen = ref(false);
 const menuItems = [
   { to: '/', text: 'Inicio' },
   { to: '/auspiciantes', text: 'Auspiciantes' },
+  { to: '/participantes', text: 'Participantes' },
   { to: '/programacion', text: 'Programación' },
-  { to: '/contacto', text: 'Contacto' }
+  { to: '/contacto', text: 'Contacto' },
 ];
 
 const toggleMenu = () => {

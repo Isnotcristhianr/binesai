@@ -4,6 +4,7 @@ import HomeView from '../views/HomeView.vue'
 import AuspiciantesView from '../views/Auspiciantes.vue'
 import ContactoView from '../views/ContactoView.vue'
 import ProgramacionView from '../views/ProgramacionView.vue'
+import ParticipantesView from '../views/ParticipantesView.vue'
 //fuera de pago
 import PagarView from '../views/Pagar.vue'
 const router = createRouter({
@@ -74,6 +75,16 @@ const router = createRouter({
       meta: {
         ogTitle: "Inscripción a la Bienal Nacional de Escultura San Antonio de Ibarra",
         title: "Inscripción a la Bienal Nacional de Escultura San Antonio de Ibarra",
+      },
+    },
+    /* Participantes */
+    {
+      path: '/participantes/:id?',
+      name: 'participantes',
+      component: ParticipantesView,
+      meta: {
+        ogTitle: "Participantes de la Bienal Nacional de Escultura San Antonio de Ibarra",
+        title: "Participantes de la Bienal Nacional de Escultura San Antonio de Ibarra",
       },
     },
 
