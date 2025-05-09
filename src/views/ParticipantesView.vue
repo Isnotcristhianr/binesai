@@ -43,10 +43,10 @@
                    class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div v-for="(imagen, index) in obra.imagenes" 
                      :key="index" 
-                     class="aspect-w-4 aspect-h-3 overflow-hidden rounded-xl group">
+                     class=" overflow-hidden rounded-xl group">
                   <img :src="imagen" 
                        :alt="`${obra.titulo} - Vista ${index + 1}`" 
-                       class="object-cover w-full h-full transform transition-transform duration-700 group-hover:scale-110">
+                       class="object-cover transform transition-transform duration-700 group-hover:scale-110">
                 </div>
               </div>
 
