@@ -1,9 +1,6 @@
 <template>
     <Vue3Marquee
-      gradient-length="50%"
-      gradient-color="white"
       auto-fill="true"
-      pause-on-hover="true"
       speed="30"  
       class="sponsors-marquee"
     >
