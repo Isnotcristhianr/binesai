@@ -2,14 +2,13 @@
 // Vue
 import { ref } from "vue";
 import { Icon } from "@iconify/vue";
-
 const isOpen = ref(false);
 const menuItems = [
-  { to: '/', text: 'Inicio' },
-  { to: '/auspiciantes', text: 'Auspiciantes' },
-  { to: '/participantes', text: 'Participantes' },
+  { to: '/', text: 'Acerca de la 8va Binesai' },
+  { to: '/participantes', text: 'Artistas Participantes' },
   { to: '/programacion', text: 'Programación' },
   { to: '/contacto', text: 'Contacto' },
+  { to: '/auspiciantes', text: 'Auspiciantes' },
 ];
 
 const toggleMenu = () => {
@@ -38,9 +37,9 @@ const toggleMenu = () => {
 
           <!-- Logo centrado -->
           <div class="absolute left-1/2 transform -translate-x-1/2">
-            <span class="text-2xl font-light tracking-[0.2em] text-gray-900">
+            <router-link to="/" class="text-2xl font-light tracking-[0.2em] text-gray-900">
               BINESAI
-            </span>
+            </router-link>
           </div>
 
           <!-- Elemento fantasma para mantener el espaciado -->

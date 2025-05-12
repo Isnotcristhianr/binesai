@@ -23,7 +23,7 @@ const contacto = {
 </script>
 
 <template>
-  <footer class="bg-gradient-to-b from-gray-900 to-black text-white">
+  <footer class="bg-red-800 text-white">
     <!-- Contenido principal del footer -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
@@ -34,7 +34,7 @@ const contacto = {
             alt="Logo BINESAI" 
             class="h-20 rounded-lg"
           />
-          <p class="text-gray-400 text-sm leading-relaxed">
+          <p class="text-sm leading-relaxed">
             Bienal Nacional de Escultura San Antonio de Ibarra, celebrando y promoviendo el arte escultórico ecuatoriano.
           </p>
         </div>
@@ -46,7 +46,7 @@ const contacto = {
             <li v-for="enlace in enlaces" :key="enlace.ruta">
               <router-link 
                 :to="enlace.ruta"
-                class="text-gray-400 hover:text-white transition-colors duration-300"
+                class=" hover:text-white transition-colors duration-300"
               >
                 {{ enlace.texto }}
               </router-link>
@@ -57,7 +57,7 @@ const contacto = {
         <!-- Información de contacto -->
         <div>
           <h3 class="text-lg font-medium text-[#9B1C1F] mb-4">Contacto</h3>
-          <ul class="space-y-3 text-gray-400">
+          <ul class="space-y-3">
             <li class="flex items-start">
               <Icon icon="mdi:map-marker" class="w-5 h-5 mt-1 mr-2 text-[#9B1C1F]" />
               <span>{{ contacto.direccion }}</span>

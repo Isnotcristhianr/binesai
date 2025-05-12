@@ -4,7 +4,7 @@
       <!-- Vista de Lista -->
       <div v-if="!participanteSeleccionado" class="space-y-12">
         <div class="text-center">
-          <h1 class="text-4xl font-light text-gray-900 mb-4">Artistas Seleccionados</h1>
+          <h1 class="text-4xl font-light text-gray-900 mb-4">Artistas Participantes</h1>
           <p class="text-lg text-gray-500 max-w-2xl mx-auto">Descubre las obras y trayectorias de nuestros talentosos artistas participantes</p>
         </div>
         
