@@ -8,7 +8,8 @@
     "src/**/*.js",
     "src/**/*.jsx",
     "src/**/*.md",
-    "src/**/*.json"
+    "src/**/*.json",
+    "src/**/*.svg"
   ],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {

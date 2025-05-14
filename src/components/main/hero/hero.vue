@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div class="hero min-h-screen bg-white relative">
+  <div class="hero min-h-screen mt-5 bg-white relative">
 
     <!-- Contenido principal -->
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-screen flex flex-col">

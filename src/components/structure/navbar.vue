@@ -6,7 +6,9 @@ const isOpen = ref(false);
 const menuItems = [
   { to: '/', text: 'Acerca de la 8va Binesai' },
   { to: '/participantes', text: 'Artistas Participantes' },
+  { to: '/ganadores', text: 'Ganadores' },
   { to: '/programacion', text: 'Programación' },
+  { to: '/curaduria', text: 'Curaduria' },
   { to: '/contacto', text: 'Contacto' },
   { to: '/auspiciantes', text: 'Auspiciantes' },
 ];
@@ -37,7 +39,7 @@ const toggleMenu = () => {
 
           <!-- Logo centrado -->
           <div class="absolute left-1/2 transform -translate-x-1/2">
-            <router-link to="/" class="text-2xl font-light tracking-[0.2em] text-gray-900">
+            <router-link to="/" class="logo-link text-2xl font-light tracking-[0.2em] text-gray-900">
               BINESAI
             </router-link>
           </div>
@@ -61,7 +63,7 @@ const toggleMenu = () => {
             :key="item.to"
             :to="item.to"
             @click="toggleMenu"
-            class="block text-4xl font-light tracking-wide text-gray-900 hover:text-[#9B1C1F] transition-all duration-300 transform hover:scale-105"
+            class="nav-link block text-4xl font-light tracking-wide text-gray-900 hover:text-[#9B1C1F] transition-all duration-300 transform hover:scale-105"
           >
             {{ item.text }}
           </router-link>
@@ -79,13 +81,14 @@ const toggleMenu = () => {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.router-link-active {
+/* Estilos específicos para los enlaces de navegación */
+.nav-link.router-link-active {
   color: #9B1C1F;
   font-weight: 400;
+  position: relative;
 }
 
-/* Animación suave para el underline */
-.router-link-active::after {
+.nav-link.router-link-active::after {
   content: '';
   position: absolute;
   bottom: -2px;
@@ -97,13 +100,25 @@ const toggleMenu = () => {
   transition: transform 0.3s ease;
 }
 
+/* Estilos específicos para el logo */
+.logo-link {
+  position: relative;
+  display: inline-block;
+}
+
+.logo-link.router-link-active {
+  color: inherit;
+  font-weight: inherit;
+  animation: none;
+}
+
 /* Animación para el menú */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-.router-link-active {
+.nav-link.router-link-active {
   animation: fadeIn 0.5s ease forwards;
 }
 </style>

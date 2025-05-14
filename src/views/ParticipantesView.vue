@@ -46,7 +46,7 @@
                      class=" overflow-hidden rounded-xl group">
                   <img :src="imagen" 
                        :alt="`${obra.titulo} - Vista ${index + 1}`" 
-                       class="object-cover transform transition-transform duration-700 group-hover:scale-110">
+                       class="object-cover w-100 h-100 transform transition-transform duration-700 group-hover:scale-110">
                 </div>
               </div>
 

@@ -5,6 +5,9 @@ import AuspiciantesView from '../views/Auspiciantes.vue'
 import ContactoView from '../views/ContactoView.vue'
 import ProgramacionView from '../views/ProgramacionView.vue'
 import ParticipantesView from '../views/ParticipantesView.vue'
+import GanadoresView from '../views/Ganadores.vue'
+import CuraduriaView from '../views/Curaduria.vue'
+  
 //fuera de pago
 import PagarView from '../views/Pagar.vue'
 const router = createRouter({
@@ -87,7 +90,26 @@ const router = createRouter({
         title: "Participantes de la Bienal Nacional de Escultura San Antonio de Ibarra",
       },
     },
-
+    /* Ganadores */
+    {
+      path: '/ganadores',
+      name: 'ganadores',
+      component: GanadoresView,
+      meta: {
+        ogTitle: "Ganadores de la Bienal Nacional de Escultura San Antonio de Ibarra",
+        title: "Ganadores de la Bienal Nacional de Escultura San Antonio de Ibarra",
+      },
+    },
+    /* Curaduría */
+    {
+      path: '/curaduria',
+      name: 'curaduria',
+      component: CuraduriaView,
+      meta: {
+        ogTitle: "Curaduría de la Bienal Nacional de Escultura San Antonio de Ibarra",
+        title: "Curaduría de la Bienal Nacional de Escultura San Antonio de Ibarra",
+      },
+    },
   ]
 })
 

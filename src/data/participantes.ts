@@ -27,7 +27,7 @@ export const participantes: Participante[] = [
       soporte: 'cubo de madera color blanco',
       dimensiones: '100 de largo x 70 de ancho x 80 de alto, centímetros aproximadamente. 18 kilos aproximadamente.',
       materiales: 'cerámica, madera, pan de oro',
-      imagenes: ['/imgs/artistas/1_alomoto/1.JPG', '/imgs/artistas/1_alomoto/2.JPG'],
+      imagenes: ['/imgs/artistas/1_alomoto/1.jpg', '/imgs/artistas/1_alomoto/2.jpg'],
     }
   ] },
   { id: 2, nombre: 'Ayala Mónica', provincia: 'Imbabura', obras: [
@@ -49,7 +49,7 @@ export const participantes: Participante[] = [
       soporte: "Arcilla, madera, piedra",
       dimensiones: "135cm alto x 70cm fondo x 100cm ancho ",
       materiales: "Arcilla, madera, piedra",
-      imagenes: ['/imgs/artistas/3_buitron/1.jpeg', '/imgs/artistas/3_buitron/2.jpeg'],
+      imagenes: ['/imgs/artistas/3_buitron/1.jpg', '/imgs/artistas/3_buitron/2.jpg'],
     }
   ] },
   { id: 4, nombre: 'Cabascango Carlos', provincia: 'Imbabura', obras: [
@@ -60,7 +60,7 @@ export const participantes: Participante[] = [
       soporte: "Mi objetivo es continuar el legado de la escultura en madera en San Antonio, recuperando la tradición y la técnica que se están perdiendo. Quiero crear una obra completamente de madera, sin intervención de materiales modernos, que refleje la pasión y la dedicación de los artesanos que vinieron antes que yo. Un tributo a la tradición y un ejemplo de que la técnica y la calidad pueden seguir siendo relevantes en la era moderna.",
       dimensiones: "1.15 de alto 60 de ancho, peso 7 kilogramos.",
       materiales: "Madera de nogal ",
-      imagenes: ['/imgs/artistas/4_cabascango/1.jpeg', '/imgs/artistas/4_cabascango/2.jpeg'],
+      imagenes: ['/imgs/artistas/4_cabascango/1.jpg', '/imgs/artistas/4_cabascango/2.jpg'],
     }
   ] },
   { id: 5, nombre: 'Casamin Edison', provincia: 'Pichincha' },
