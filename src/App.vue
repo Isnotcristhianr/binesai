@@ -1,6 +1,8 @@
 <script setup lang="ts">
-/* Components */
-import Navbar from "@/components/structure/navbar.vue";
+/* Components */  
+import { defineAsyncComponent } from "vue";
+
+const Navbar = defineAsyncComponent(() => import("./components/structure/navbar.vue"));
 
 import { onMounted } from "vue";
 onMounted(() => {
@@ -11,7 +13,7 @@ onMounted(() => {
         "@type": "Organization",
         "name": "BINESAI",
         "url": "https://binesai.com",
-        "logo": "https://binesai.com/imgs/Logo BINESAI.png",
+        "logo": "https://binesai.com/icons/Logo BINESAI-Horizontal_9.jpg",
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": "+593-999999999",
@@ -28,7 +30,7 @@ onMounted(() => {
       <Navbar />
     </header>
     <h1 hidden>Binesai: Bienal Nacional de Escultura San Antonio de Ibarra</h1>
-    <main class="bg-base-100">
+    <main >
       <RouterView />
     </main>
   </div>

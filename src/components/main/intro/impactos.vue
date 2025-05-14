@@ -1,80 +1,73 @@
 <script setup lang="ts">
+import { ref } from "vue";
 import { Icon } from "@iconify/vue";
+
+const impactos = [
+  {
+    icono: "mdi:city-variant",
+    titulo: "Desarrollo Cultural y Económico",
+    descripcion: "El evento fortalece la identidad local y promueve el turismo cultural en San Antonio de Ibarra."
+  },
+  {
+    icono: "mdi:school",
+    titulo: "Formación y Promoción de Jóvenes Talentos",
+    descripcion: "Fomenta el diálogo intergeneracional entre artistas consagrados y emergentes."
+  },
+  {
+    icono: "mdi:earth",
+    titulo: "Visibilización Internacional",
+    descripcion: "La BINESAI posiciona a Ecuador como un referente de la escultura contemporánea en el ámbito global."
+  }
+];
+
+const impactoActivo = ref(0);
+
+const seleccionarImpacto = (index: number) => {
+  impactoActivo.value = index;
+};
 </script>
 
 <template>
-  <div
-    class="relative flex flex-col items-center justify-center min-h-screen w-screen"
-    style="
-      background-image: url(/imgs/bgImpactos.webp);
-      background-size: cover;
-      background-position: center;
-      background-size: 100% 100%;
-    "
-  >
-    <!-- Sombreado Blanco -->
-    <div class="absolute inset-0 opacity-30"></div>
+  <div class="py-20 bg-gray-50">
+    <div class="max-w-[1000px] mx-auto px-4 sm:px-6">
+      <h2 class="text-4xl font-medium text-[#9B1C1F] mb-16 text-center">
+        Impactos Clave
+      </h2>
 
-    <!-- Contenido Principal -->
-    <div
-      class="relative z-10 max-w-3xl mx-auto backdrop-blur-lg shadow-lg rounded-lg p-8 md:p-12 m-4"
-    >
-      <!-- Card Título -->
-      <div class="flex items-start mb-8">
-        <h2
-          class="text-5xl font-bold text-secondary leading-tight text-center mb-8 drop-shadow-lg"
-        >
-          {{ $t("impactos_clave.title") }}
-        </h2>
-      </div>
-
-      <!-- Contenido Colapsable -->
-      <div class="w-full space-y-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div
-          class="collapse collapse-arrow bg-white shadow-lg rounded-lg overflow-hidden"
+          v-for="(impacto, index) in impactos"
+          :key="index"
+          class="group relative bg-white p-6 rounded-lg shadow-sm transition-all duration-300 hover:shadow-lg"
+          @mouseenter="seleccionarImpacto(index)"
+          :class="{ 'ring-2 ring-[#9B1C1F] ring-opacity-50': impactoActivo === index }"
         >
-          <input type="checkbox" />
-          <div
-            class="collapse-title text-lg md:text-xl font-semibold text-primary"
-          >
-            {{ $t("impactos_clave.impactos.impacto1.title") }}
-          </div>
-          <div
-            class="collapse-content p-4 text-base md:text-lg text-gray-800 leading-relaxed"
-          >
-            <p>{{ $t("impactos_clave.impactos.impacto1.description") }}</p>
-          </div>
-        </div>
+          <div class="flex flex-col h-full">
+            <!-- Icono -->
+            <div 
+              class="w-12 h-12 mb-4 flex items-center justify-center rounded-full bg-[#9B1C1F] bg-opacity-10 text-[#9B1C1F] transition-all duration-300 group-hover:bg-opacity-20"
+            >
+              <Icon 
+                :icon="impacto.icono" 
+                class="w-6 h-6"
+              />
+            </div>
 
-        <div
-          class="collapse collapse-arrow bg-white shadow-lg rounded-lg overflow-hidden"
-        >
-          <input type="checkbox" />
-          <div
-            class="collapse-title text-lg md:text-xl font-semibold text-primary"
-          >
-            {{ $t("impactos_clave.impactos.impacto2.title") }}
-          </div>
-          <div
-            class="collapse-content p-4 text-base md:text-lg text-gray-800 leading-relaxed"
-          >
-            <p>{{ $t("impactos_clave.impactos.impacto2.description") }}</p>
-          </div>
-        </div>
+            <!-- Título -->
+            <h3 class="text-xl font-medium text-gray-900 mb-3">
+              {{ impacto.titulo }}
+            </h3>
 
-        <div
-          class="collapse collapse-arrow bg-white shadow-lg rounded-lg overflow-hidden"
-        >
-          <input type="checkbox" />
-          <div
-            class="collapse-title text-lg md:text-xl font-semibold text-primary"
-          >
-            {{ $t("impactos_clave.impactos.impacto3.title") }}
-          </div>
-          <div
-            class="collapse-content p-4 text-base md:text-lg text-gray-800 leading-relaxed"
-          >
-            <p>{{ $t("impactos_clave.impactos.impacto3.description") }}</p>
+            <!-- Descripción -->
+            <p class="text-gray-600 leading-relaxed flex-grow">
+              {{ impacto.descripcion }}
+            </p>
+
+            <!-- Indicador visual -->
+            <div 
+              class="absolute bottom-0 left-0 w-full h-1 bg-[#9B1C1F] transform scale-x-0 transition-transform duration-300 origin-left"
+              :class="{ 'scale-x-100': impactoActivo === index }"
+            ></div>
           </div>
         </div>
       </div>
@@ -83,7 +76,23 @@ import { Icon } from "@iconify/vue";
 </template>
 
 <style scoped>
-.bg-opacity-80 {
-  background-color: rgba(255, 255, 255, 0.8);
+/* Optimizaciones de rendimiento */
+.container {
+  contain: content;
+}
+
+/* Transiciones suaves */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Reducción de movimiento si el usuario lo prefiere */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
 }
 </style>

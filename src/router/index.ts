@@ -1,9 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { defineAsyncComponent } from 'vue'
 import HomeView from '../views/HomeView.vue'
 import AuspiciantesView from '../views/Auspiciantes.vue'
 import ContactoView from '../views/ContactoView.vue'
 import ProgramacionView from '../views/ProgramacionView.vue'
-import FormView from '../views/FormView.vue'
+import ParticipantesView from '../views/ParticipantesView.vue'
+import GanadoresView from '../views/Ganadores.vue'
+import CuraduriaView from '../views/Curaduria.vue'
+  
+//fuera de pago
+import PagarView from '../views/Pagar.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -15,7 +21,13 @@ const router = createRouter({
         ogTitle: "Bienvenido a la Bienal Nacional de Escultura San Antonio de Ibarra",
         title: "Bienvenido a la Bienal Nacional de Escultura San Antonio de Ibarra",
       },
-    },
+    }, 
+    //fuera de pago
+   /*  {
+      path: '/',
+      name: 'home',
+      component: PagarView,
+    }, */
     {
       path: '/about',
       name: 'about',
@@ -62,13 +74,42 @@ const router = createRouter({
     {
       path: '/inscripcion',
       name: 'inscripcion',
-      component: FormView,
+      component: defineAsyncComponent(() => import('../views/FormView.vue')),
       meta: {
         ogTitle: "Inscripción a la Bienal Nacional de Escultura San Antonio de Ibarra",
         title: "Inscripción a la Bienal Nacional de Escultura San Antonio de Ibarra",
       },
     },
-
+    /* Participantes */
+    {
+      path: '/participantes/:id?',
+      name: 'participantes',
+      component: ParticipantesView,
+      meta: {
+        ogTitle: "Participantes de la Bienal Nacional de Escultura San Antonio de Ibarra",
+        title: "Participantes de la Bienal Nacional de Escultura San Antonio de Ibarra",
+      },
+    },
+    /* Ganadores */
+    {
+      path: '/ganadores',
+      name: 'ganadores',
+      component: GanadoresView,
+      meta: {
+        ogTitle: "Ganadores de la Bienal Nacional de Escultura San Antonio de Ibarra",
+        title: "Ganadores de la Bienal Nacional de Escultura San Antonio de Ibarra",
+      },
+    },
+    /* Curaduría */
+    {
+      path: '/curaduria',
+      name: 'curaduria',
+      component: CuraduriaView,
+      meta: {
+        ogTitle: "Curaduría de la Bienal Nacional de Escultura San Antonio de Ibarra",
+        title: "Curaduría de la Bienal Nacional de Escultura San Antonio de Ibarra",
+      },
+    },
   ]
 })
 

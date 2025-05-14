@@ -6,7 +6,10 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "src/**/*.js",
-    "src/**/*.jsx"
+    "src/**/*.jsx",
+    "src/**/*.md",
+    "src/**/*.json",
+    "src/**/*.svg"
   ],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
