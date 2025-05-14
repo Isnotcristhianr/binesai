@@ -1,0 +1,44 @@
+MIT License with Restricted Modifications
+
+Copyright (c) 2024 Cristhian Recalde (isnotcristhianr.dev)
+
+Por la presente se concede permiso, sin cargo, a cualquier persona que obtenga una copia
+de este software y los archivos de documentación asociados (el "Software"), para tratar
+en el Software sin restricción, incluidos, entre otros, los derechos
+usar, copiar, modificar, fusionar, publicar, distribuir, sublicenciar y/o vender
+copias del Software, y para permitir a las personas a las que se les proporcione el Software
+hacer lo mismo, sujeto a las siguientes condiciones:
+
+1. RESTRICCIONES DE MODIFICACIÓN PRINCIPAL:
+   - Las modificaciones principales del código base, incluyendo pero no limitado a:
+     * Arquitectura principal del proyecto
+     * Componentes core
+     * Configuraciones de seguridad
+     * Integraciones de APIs principales
+   Solo pueden ser realizadas por el autor original (Cristhian Recalde) o con su autorización expresa por escrito.
+
+2. COLABORACIONES PERMITIDAS:
+   - Los desarrolladores pueden:
+     * Clonar el repositorio
+     * Crear forks
+     * Proponer cambios mediante pull requests
+     * Implementar mejoras y correcciones
+     * Añadir nuevas características secundarias
+
+3. ATRIBUCIÓN:
+   - Cualquier uso, modificación o distribución del Software debe mantener visible:
+     * El aviso de copyright original
+     * Esta notificación de licencia
+     * Los créditos al autor original
+     * El enlace al sitio web del autor (isnotcristhianr.dev)
+
+El aviso de copyright anterior y este aviso de permiso se incluirán en todos
+copias o partes sustanciales del Software.
+
+EL SOFTWARE SE PROPORCIONA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O
+IMPLÍCITO, INCLUYENDO PERO NO LIMITADO A LAS GARANTÍAS DE COMERCIABILIDAD,
+IDONEIDAD PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN. EN NINGÚN CASO EL
+LOS AUTORES O TITULARES DE LOS DERECHOS DE AUTOR SERÁN RESPONSABLES DE CUALQUIER RECLAMACIÓN, DAÑOS U OTROS
+RESPONSABILIDAD, YA SEA EN UNA ACCIÓN DE CONTRATO, AGRAVIO O DE OTRO MODO, DERIVADA DE,
+FUERA DE O EN CONEXIÓN CON EL SOFTWARE O EL USO U OTROS TRATOS EN EL
+SOFTWARE. 
