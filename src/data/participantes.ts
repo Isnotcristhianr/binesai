@@ -63,12 +63,72 @@ export const participantes: Participante[] = [
       imagenes: ['/imgs/artistas/4_cabascango/1.jpg', '/imgs/artistas/4_cabascango/2.jpg'],
     }
   ] },
-  { id: 5, nombre: 'Casamin Edison', provincia: 'Pichincha' },
-  { id: 6, nombre: 'Castillo Carlos', provincia: 'Imbabura' },
-  { id: 7, nombre: 'Celi David', provincia: 'Pichincha' },
-  { id: 8, nombre: 'Chalco Patricio', provincia: 'Azuay' },
-  { id: 9, nombre: 'Estrella Milton', provincia: 'Pichincha' },
-  { id: 10, nombre: 'Fernández Richard', provincia: 'Pichincha' },
+  { id: 5, nombre: 'Casamin Edison', provincia: 'Pichincha', obras: [
+    {
+      id: 1,
+      titulo: "DESFALCARD: Homo Economicus",
+      tecnica: "Escultura",
+      soporte: "Mixta - Instalación",
+      dimensiones: "200cmX100cmX100cm 15kg",
+      materiales: "Metal soldado, MDF, hilo nylon, arena, grabado, intaglio ",
+      imagenes: ['/imgs/artistas/5_casamin/1.jpg', '/imgs/artistas/5_casamin/2.jpg'],
+    }
+  ] },
+  { id: 6, nombre: 'Castillo Carlos', provincia: 'Imbabura', obras: [
+    {
+      id: 1,
+      titulo: "LA NUEVA ERA",
+      tecnica: "Mixta",
+      soporte: "N/A",
+      dimensiones: "Alto 1.90 cm x 80.5 cm x 30.5 cm",
+      materiales: "Madera, metal, aluminio, tuercas, tornillos, auto perforantes, microchips,soldadura, acero, plástico, resina poliéster, fibra de vidrio, tubos plásticos, acrílicos,lacas.",
+      imagenes: ['/imgs/artistas/6_castillo/1.jpg', '/imgs/artistas/6_castillo/2.jpg'],
+    }
+  ] },
+  { id: 7, nombre: 'Celi David', provincia: 'Pichincha', obras: [
+    {
+      id: 1,
+      titulo: "Ritualidad Desencofrada",
+      tecnica: "Talla sobre bloque de cemento (instalación)",
+      soporte: "Bloque de cemento",
+      dimensiones: "30*30*120 cm aprox",
+      materiales: "Cemento, metal barrillas, pigmentos y bloques de cemento",
+      imagenes: ['/imgs/artistas/7_celi/1.jpg', '/imgs/artistas/7_celi/2.jpg'],
+    }
+  ] },
+  { id: 8, nombre: 'Chalco Patricio', provincia: 'Azuay', obras: [
+    {
+      id: 1,
+      titulo: "Sombra y Permanencia: La Huella del Obrero",
+      tecnica: "Instalación escultórica",
+      soporte: "Reproducciones en yeso, madera y metal",
+      dimensiones: "Ancho 80, largo 80 y alto 1.20",
+      materiales: "Base de madera para soportes de luz, fuentes de luz neutra y blanca fuerte, reproducción de manos en yeso, herramientas dañadas y oxidadas.",
+      imagenes: ['/imgs/artistas/8_chalco/1.jpg', '/imgs/artistas/8_chalco/2.jpg'],
+    }
+  ] },
+  { id: 9, nombre: 'Estrella Milton', provincia: 'Pichincha', obras: [
+    {
+      id: 1,
+      titulo: "GEOMETRIA ORGANICA",
+      tecnica: "ESCULTURA-MADERA MIXTA",
+      soporte: "Base escultura (9 cm x 30 cm x 16 cm)",
+      dimensiones: "Escultura (54 cm x 69cm x 30 cm)",
+      materiales: "Escultura: Madera de Nogal y Naranjillo",
+      imagenes: ['/imgs/artistas/9_estrella/1.jpg', '/imgs/artistas/9_estrella/2.jpg'],
+    }
+  ] },
+  { id: 10, nombre: 'Fernández Richard', provincia: 'Pichincha', obras: [
+    {
+      id: 1,
+      titulo: "Retratos del Despojo",
+      tecnica: "Escultura Cerámica/ Placas, Modelado y Esgrafiado",
+      soporte: "Madera y Pernos de Hierro",
+      dimensiones: "190 cm x 40 cm",
+      materiales: "Arcilla de baja y alta temperatura, engobes, patinas, bajo cubiertas, esmaltes brillantes y mates.",
+      imagenes: ['/imgs/artistas/10_fernandez/1.jpg', '/imgs/artistas/10_fernandez/2.jpg'],
+    }
+  ] },
   { id: 11, nombre: 'Förster Ana', provincia: 'Guayas' },
   { id: 12, nombre: 'Fuentes Mario', provincia: 'Imbabura' },
   { id: 13, nombre: 'Fuentes David', provincia: 'Imbabura' },
