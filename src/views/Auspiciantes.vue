@@ -18,17 +18,21 @@ const organizadores = [
 ];
 
 const auspiciantes = [
-  { nombre: 'Prefectura de Imbabura', imagen: '/imgs/sponsors/1_prefectura.png' },
-  { nombre: 'Centro Cultural Metropolitano', imagen: '/imgs/sponsors/2_ccmetropolitano.png' },
-  { nombre: 'Bienal de Cuenca', imagen: '/imgs/sponsors/3_bienalcuenca.png' },
-  { nombre: 'Universidad Técnica del Norte', imagen: '/imgs/sponsors/4_utn.png' },
-  { nombre: 'Universidad de las Américas', imagen: '/imgs/sponsors/5_udla.png' },
-  { nombre: 'OUI', imagen: '/imgs/sponsors/6_oui.png' },
-  { nombre: 'CC Tahuandos', imagen: '/imgs/sponsors/7_cctahuandos.png' },
-  { nombre: 'CC Imbabura', imagen: '/imgs/sponsors/8_ccimbabura.png' },
-  { nombre: 'Flora P', imagen: '/imgs/sponsors/9_florap.png' },
-  { nombre: 'Caran', imagen: '/imgs/sponsors/10_caran.png' },
-  { nombre: 'Cerelectric', imagen: '/imgs/sponsors/11_cerelectric.png' }
+  { nombre: 'GAD Provincial de Imbabura', imagen: '/imgs/sponsors/LOGO WEB GAD PROVINCIAL.png' },
+  { nombre: 'GAD San Antonio', imagen: '/imgs/sponsors/LOGO WEB GAD SAN ANTONIO.png' },
+  { nombre: 'Alcaldía de Ibarra', imagen: '/imgs/sponsors/LOGO WEB ALCALDIA IBARRA.png' },
+  { nombre: 'Alcaldía de Cuenca', imagen: '/imgs/sponsors/LOGO WEB ALCALDIA CUENCA.png' },
+  { nombre: 'Instituto Superior Daniel Reyes', imagen: '/imgs/sponsors/LOGO WEB DANIEL REYES.png' },
+  { nombre: 'Universidad Técnica del Norte', imagen: '/imgs/sponsors/LOGO WEB UTN.png' },
+  { nombre: 'Universidad de Las Américas', imagen: '/imgs/sponsors/LOGO WEB UDLA.png' },
+  { nombre: 'UNIR', imagen: '/imgs/sponsors/LOGO WEB UNIR.png' },
+  { nombre: 'Centro Cultural Metropolitano', imagen: '/imgs/sponsors/LOGO WEB CENTRO CULTURAL METROPOLITANO.png' },
+  { nombre: 'Casa de la Cultura Ecuatoriana - Imbabura', imagen: '/imgs/sponsors/LOGO WEB CCE IMBABURA.png' },
+  { nombre: 'Centro Cultural El Cuartel', imagen: '/imgs/sponsors/LOGO WEB CCT.png' },
+  { nombre: 'Floralp', imagen: '/imgs/sponsors/LOGO WEB FLORALP.png' },
+  { nombre: 'Caran', imagen: '/imgs/sponsors/LOGO WEB CARAN.png' },
+  { nombre: 'Agencia OUI', imagen: '/imgs/sponsors/LOGO WEB AGENCIA OUI.png' },
+  { nombre: 'BINESAI', imagen: '/imgs/sponsors/LOGO WEB BINESAI.png' }
 ];
 </script>
 
@@ -68,17 +72,18 @@ const auspiciantes = [
           Auspiciantes
         </h2>
 
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center">
           <div
             v-for="aus in auspiciantes"
             :key="aus.nombre"
             class="group"
           >
-            <div class="w-full aspect-square flex items-center justify-center p-4 bg-white rounded-lg transition-all duration-300 hover:shadow-lg">
+            <div class="w-full aspect-square flex items-center justify-center p-6 bg-white rounded-lg transition-all duration-300 hover:shadow-lg">
               <img
                 :src="aus.imagen"
                 :alt="aus.nombre"
-                class="w-full h-full object-contain opacity-80 transition-opacity group-hover:opacity-100"
+                class=" object-contain opacity-90 transition-opacity group-hover:opacity-100"
+                loading="lazy"
               />
             </div>
           </div>

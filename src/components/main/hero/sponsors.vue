@@ -22,17 +22,20 @@
   
   // Lista de URLs de imágenes
   const imgArray = [
-    '/imgs/sponsors/1_prefectura.png',
-    '/imgs/sponsors/2_ccmetropolitano.png',
-    '/imgs/sponsors/3_bienalcuenca.png',
-    '/imgs/sponsors/4_utn.png',
-    '/imgs/sponsors/5_udla.png',
-    '/imgs/sponsors/6_oui.png',
-    '/imgs/sponsors/7_cctahuandos.png',
-    '/imgs/sponsors/8_ccimbabura.png',
-    '/imgs/sponsors/9_florap.png',
-    '/imgs/sponsors/10_caran.png',
-    '/imgs/sponsors/11_cerelectric.png',
+    '/imgs/sponsors/LOGO WEB AGENCIA OUI.png',
+    '/imgs/sponsors/LOGO WEB ALCALDIA CUENCA.png',
+    '/imgs/sponsors/LOGO WEB ALCALDIA IBARRA.png',
+    '/imgs/sponsors/LOGO WEB BINESAI.png',
+    '/imgs/sponsors/LOGO WEB CARAN.png',
+    '/imgs/sponsors/LOGO WEB CCE IMBABURA.png',
+    '/imgs/sponsors/LOGO WEB CCT.png',
+    '/imgs/sponsors/LOGO WEB CENTRO CULTURAL METROPOLITANO.png',
+    '/imgs/sponsors/LOGO WEB DANIEL REYES.png',
+    '/imgs/sponsors/LOGO WEB FLORALP.png',
+    '/imgs/sponsors/LOGO WEB GAD SAN ANTONIO.png',
+    '/imgs/sponsors/LOGO WEB UDLA.png',
+    '/imgs/sponsors/LOGO WEB UNIR.png',
+    '/imgs/sponsors/LOGO WEB UTN.png',
   ]
   </script>
   

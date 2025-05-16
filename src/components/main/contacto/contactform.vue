@@ -4,6 +4,7 @@ import { Icon } from '@iconify/vue';
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+
 AOS.init({
   duration: 1000,
   once: true,
@@ -103,14 +104,14 @@ const slides = [
                   for="name" 
                   class="block text-sm font-medium text-gray-700 mb-1"
                 >
-                  {{ $t("contacto.form.name.label") }}
+                  Nombre Completo
                 </label>
                 <input
                   v-model="formData.name"
                   type="text"
                   id="name"
                   name="name"
-                  :placeholder="$t('contacto.form.name.placeholder')"
+                  placeholder="Ingresa tu nombre"
                   class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#9B1C1F] focus:border-transparent transition-all duration-300"
                   required
                 />
@@ -121,14 +122,14 @@ const slides = [
                   for="email" 
                   class="block text-sm font-medium text-gray-700 mb-1"
                 >
-                  {{ $t("contacto.form.email.label") }}
+                  Correo Electrónico
                 </label>
                 <input
                   v-model="formData.email"
                   type="email"
                   id="email"
                   name="email"
-                  :placeholder="$t('contacto.form.email.placeholder')"
+                  placeholder="Ingresa tu correo electrónico"
                   class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#9B1C1F] focus:border-transparent transition-all duration-300"
                   required
                 />
@@ -139,13 +140,13 @@ const slides = [
                   for="message" 
                   class="block text-sm font-medium text-gray-700 mb-1"
                 >
-                  {{ $t("contacto.form.message.label") }}
+                  Mensaje
                 </label>
                 <textarea
                   v-model="formData.message"
                   id="message"
                   name="message"
-                  :placeholder="$t('contacto.form.message.placeholder')"
+                  placeholder="Ingresa tu mensaje"
                   class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#9B1C1F] focus:border-transparent transition-all duration-300 min-h-[120px]"
                   required
                 ></textarea>
@@ -156,7 +157,7 @@ const slides = [
               type="submit" 
               class="w-full bg-[#9B1C1F] text-white py-3 rounded-lg hover:bg-[#7a1619] transform hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
             >
-              {{ $t("contacto.form.submit") }}
+              Enviar mensaje
             </button>
           </form>
         </div>

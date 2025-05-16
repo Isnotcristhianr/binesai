@@ -30,13 +30,10 @@ const contacto = {
         <!-- Logo y descripción -->
         <div class="space-y-4">
           <img 
-            src="/icons/Bienal_footer.jpg" 
+            src="/icons/FooterLogo.jpg" 
             alt="Logo BINESAI" 
-            class="h-20 rounded-lg"
+            class="w-full h-full object-contain rounded-lg"
           />
-          <p class="text-sm leading-relaxed">
-            Bienal Nacional de Escultura San Antonio de Ibarra, celebrando y promoviendo el arte escultórico ecuatoriano.
-          </p>
         </div>
 
         <!-- Enlaces rápidos -->
@@ -110,16 +107,16 @@ const contacto = {
     <div class="border-t border-gray-800">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div class="flex flex-col md:flex-row justify-between items-center">
-          <p class="text-sm text-gray-400">
+          <p class="text-sm text-white">
             © {{ new Date().getFullYear() }} BINESAI. Todos los derechos reservados.
           </p>
-          <p class="text-sm text-gray-400 mt-2 md:mt-0">
+          <p class="text-sm text-white mt-2 md:mt-0">
             Desarrollado por 
             <a 
               href="https://www.isnotcristhianr.dev/" 
               target="_blank"
               rel="noopener noreferrer"
-              class="text-[#9B1C1F] hover:text-white transition-colors duration-300"
+              class="text-white hover:text-blue-500 transition-colors duration-300"
             >
               IsnotCristianr.dev
             </a>

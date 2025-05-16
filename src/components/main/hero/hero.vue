@@ -21,11 +21,12 @@
 
           <!-- Textos principales -->
           <div class="text-center md:text-left md:ml-8 lg:ml-12">
-            <h2 class="text-lg sm:text-xl md:text-2xl text-[#1E1E1E]">Bienal Nacional de Escultura</h2>
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#1E1E1E] my-2">BINESAI</h1>
-            <h3 class="text-xl sm:text-2xl md:text-3xl text-[#1E1E1E]">San Antonio de Ibarra</h3>
-            <br>
-            <h5 class="text-xs font-semibold sm:text-xs md:text-lg text-[#1E1E1E]">Del 03 al 31 de mayo</h5>
+            <div class="mt-2">
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-[#1E1E1E]">BINESAI</h1>
+              <h2 class="text-sm sm:text-base md:text-lg lg:text-xl text-[#1E1E1E]">Bienal Nacional de Escultura</h2>
+              <h3 class="text-sm sm:text-base md:text-lg lg:text-xl text-[#1E1E1E]">San Antonio de Ibarra 2025</h3>
+              <h4 class="text-sm sm:text-base md:text-lg lg:text-xl text-[#1E1E1E]">Cultura y tridimencionalidad</h4>
+            </div>
           </div>
         </div>
       </div>
